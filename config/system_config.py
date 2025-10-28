@@ -1,17 +1,30 @@
 # Claude Code Trading System Configuration
+import os
+from pathlib import Path
+
+# Try to load .env file if available
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent.parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+except ImportError:
+    # python-dotenv not installed, skip
+    pass
 
 # Database Configuration
+# Credentials can be overridden via environment variables
 DATABASE_CONFIG = {
-    "default_type": "postgresql",  # Use PostgreSQL by default
+    "default_type": os.getenv("DB_TYPE", "postgresql"),  # Use PostgreSQL by default, or set DB_TYPE=sqlite for SQLite
     "postgresql": {
-        "host": "localhost",
-        "port": 5432,
-        "database": "freqtrade",
-        "user": "freqtrade",
-        "password": "freqtrade"
+        "host": os.getenv("POSTGRES_HOST", "localhost"),
+        "port": int(os.getenv("POSTGRES_PORT", "5432")),
+        "database": os.getenv("POSTGRES_DB", "freqtrade"),
+        "user": os.getenv("POSTGRES_USER", "freqtrade"),
+        "password": os.getenv("POSTGRES_PASSWORD", "freqtrade")
     },
     "sqlite": {
-        "path": "freqtrade.db"
+        "path": os.getenv("SQLITE_PATH", "freqtrade.db")
     }
 }
 

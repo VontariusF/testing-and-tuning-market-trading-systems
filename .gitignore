@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+stratval.egg-info/
+dist/
+build/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Database
+*.db
+*.db-journal
+freqtrade_db
+freqtrade.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+temp_results/
+tmp_reports/
+
+# Compiled binaries
+*.exe
+*.out
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.o
