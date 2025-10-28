@@ -24,12 +24,68 @@ Designs and plans individual trading strategy experiments based on objectives an
       "end_date": "string"
     },
     "parameters": {
-      "fast_period": "number",
-      "slow_period": "number",
-      "rsi_period": "number",
-      "threshold": "number"
+      "strategy_specific": "object"
     },
     "seed": "number"
+  }
+}
+```
+
+## Strategy-Specific Parameter Schemas
+
+### RSI Mean Reversion Strategy
+```json
+{
+  "strategy_type": "rsi",
+  "parameters": {
+    "rsi_period": "number",
+    "oversold_threshold": "number",
+    "overbought_threshold": "number"
+  }
+}
+```
+
+### Moving Average Crossover Strategy
+```json
+{
+  "strategy_type": "moving_average",
+  "parameters": {
+    "fast_period": "number",
+    "slow_period": "number"
+  }
+}
+```
+
+### Bollinger Band Mean Reversion Strategy
+```json
+{
+  "strategy_type": "bollinger",
+  "parameters": {
+    "period": "number",
+    "deviation": "number"
+  }
+}
+```
+
+### MACD Momentum Strategy
+```json
+{
+  "strategy_type": "macd",
+  "parameters": {
+    "fast_period": "number",
+    "slow_period": "number",
+    "signal_period": "number"
+  }
+}
+```
+
+### Volume Price Analysis Strategy
+```json
+{
+  "strategy_type": "volume",
+  "parameters": {
+    "volume_period": "number",
+    "price_period": "number"
   }
 }
 ```

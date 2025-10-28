@@ -76,7 +76,9 @@ All agents communicate through file-based messaging and maintain shared context 
 - Bollinger Band Breakout
 - Volume Price Analysis
 
-**Tool Request Example**:
+**Tool Request Examples**:
+
+**RSI Strategy Example**:
 ```json
 {
   "tool": "run_experiment",
@@ -96,6 +98,52 @@ All agents communicate through file-based messaging and maintain shared context 
       "overbought_threshold": 70
     },
     "seed": 42
+  }
+}
+```
+
+**Bollinger Band Strategy Example**:
+```json
+{
+  "tool": "run_experiment",
+  "request_id": "exp_002",
+  "params": {
+    "strategy": "Bollinger band mean reversion strategy",
+    "strategy_type": "bollinger",
+    "market_data": {
+      "pair": "BTC/USDT",
+      "timeframe": "1h",
+      "start_date": "2020-01-01", 
+      "end_date": "2023-12-31"
+    },
+    "parameters": {
+      "period": 20,
+      "deviation": 2.0
+    },
+    "seed": 43
+  }
+}
+```
+
+**Moving Average Crossover Example**:
+```json
+{
+  "tool": "run_experiment",
+  "request_id": "exp_003",
+  "params": {
+    "strategy": "Moving average crossover strategy",
+    "strategy_type": "moving_average",
+    "market_data": {
+      "pair": "BTC/USDT",
+      "timeframe": "1h",
+      "start_date": "2020-01-01", 
+      "end_date": "2023-12-31"
+    },
+    "parameters": {
+      "fast_period": 10,
+      "slow_period": 30
+    },
+    "seed": 44
   }
 }
 ```

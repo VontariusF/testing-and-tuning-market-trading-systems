@@ -1,0 +1,19 @@
+{
+  "tool": "run_experiment",
+  "request_id": "run_experiment_d30086ea",
+  "params": {
+    "strategy": "Bollinger band mean reversion strategy",
+    "strategy_type": "bollinger",
+    "market_data": {
+      "pair": "BTC/USDT",
+      "timeframe": "1h",
+      "start_date": "2020-01-01",
+      "end_date": "2023-12-31"
+    },
+    "parameters": {
+      "period": 20,
+      "deviation": 2.0
+    },
+    "seed": 44
+  }
+}
