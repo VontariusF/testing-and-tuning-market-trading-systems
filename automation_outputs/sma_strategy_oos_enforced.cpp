@@ -4,10 +4,6 @@
 // Multiple-testing correction guideline applied
 // Out-of-sample dataset: /Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt
 // Automated walk-forward adjustments applied
-// Parameter bounds tightened for robustness
-// Multiple-testing correction guideline applied
-// Out-of-sample dataset: /Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt
-// Automated walk-forward adjustments applied
 #include "strategy.h"
 #include <vector>
 #include <cstdio>

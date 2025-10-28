@@ -45,7 +45,8 @@ class ValidationOrchestrator:
 
     def validate(self, strategy_path: str, pair: str = "BTC/USDT", timeframe: str = "1h",
                  mode: str = 'standard', output_dir: str = './reports',
-                 data_path: Optional[str] = None) -> Dict[str, Any]:
+                 data_path: Optional[str] = None, timeouts: Optional[Dict] = None,
+                 data_source: Optional[Dict] = None) -> Dict[str, Any]:
         """Run complete validation pipeline with database data
 
         Args:
@@ -93,8 +94,8 @@ class ValidationOrchestrator:
         print(f"🔬 Step 2: Running {len(algorithms)} validation algorithms...")
         print(f"   Algorithms: {', '.join(algorithms)}")
 
-        # Step 3: Run validation algorithms
-        algorithm_results = self._run_algorithms(strategy_results, algorithms, market_data)
+        # Step 3: Run validation algorithms with configuration
+        algorithm_results = self._run_algorithms(strategy_results, algorithms, market_data, mode=mode, timeouts=timeouts)
 
         # Step 4: Calculate scores
         print("📊 Step 3: Calculating performance scores...")
@@ -339,12 +340,16 @@ class ValidationOrchestrator:
         }
 
     def _run_algorithms(self, strategy_results: Dict[str, Any], algorithms: List[str], 
-                       market_data: List[Dict[str, Any]] = None) -> Dict[str, Any]:
+                       market_data: List[Dict[str, Any]] = None, 
+                       mode: str = 'standard', timeouts: Optional[Dict] = None) -> Dict[str, Any]:
         """Run validation algorithms with optional real data"""
         results = {}
         
         # Get validation config for this mode
-        validation_config = self.config.get_validation_config(self.config.get('validation', {}).get('current_mode', 'standard'))
+        if timeouts is None:
+            validation_config = self.config.get_validation_config(self.config.get('validation', {}).get('current_mode', 'standard'))
+        else:
+            validation_config = timeouts
 
         for algo_name in algorithms:
             if algo_name == 'all':

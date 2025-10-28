@@ -1,0 +1,24 @@
+
+Changes = 100
+Trades = 50
+Win probability = 0.5000
+DD bound confidence = 0.9000
+Bootstrap reps = 50
+Quantile reps = 50
+Test reps = 1
+
+
+
+Mean return worse (Ratio)
+  Actual       Incorrect
+   0.001    0.00300 (  3.00)
+   0.01     0.00300 (  0.30)
+   0.05     0.00400 (  0.08)
+   0.1      0.01800 (  0.18)
+
+Drawdown worse (Ratio)
+  Actual     Incorrect          Correct
+   0.001    0.00700 (  7.00)   0.00100 (  1.00)
+   0.01     0.00700 (  0.70)   0.00100 (  0.10)
+   0.05     0.01600 (  0.32)   0.03600 (  0.72)
+   0.1      0.02900 (  0.29)   0.05600 (  0.56)

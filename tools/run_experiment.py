@@ -37,8 +37,10 @@ def get_run_directories(request_path: str) -> tuple:
 def run_strategy_backtest(params: Dict[str, Any]) -> Dict[str, Any]:
     """Run strategy backtest using existing StratVal system"""
     try:
-        # Import StratVal components
+        # Import configuration and StratVal components
         sys.path.append(str(Path(__file__).parent.parent))
+        sys.path.append(str(Path(__file__).parent.parent / "config"))
+        from config.config_manager import get_data_config, get_timeout_config
         from stratval.pipeline.orchestrator import ValidationOrchestrator
         
         orchestrator = ValidationOrchestrator()
@@ -71,13 +73,19 @@ def run_strategy_backtest(params: Dict[str, Any]) -> Dict[str, Any]:
         start_date = market_data.get('start_date', '2020-01-01')
         end_date = market_data.get('end_date', '2023-12-31')
         
-        # Run validation
+        # Get configuration for timeout and data source
+        timeout_config = get_timeout_config('standard')
+        data_config = get_data_config()
+        
+        # Run validation with configuration
         results = orchestrator.validate(
             strategy_path=str(strategy_file),
             pair=pair,
             timeframe=timeframe,
             mode='standard',
-            output_dir='temp_results'
+            output_dir='temp_results',
+            timeouts=timeout_config,
+            data_source=data_config
         )
         
         # Clean up temporary files
