@@ -21,6 +21,19 @@ def load_request(request_path: str) -> Dict[str, Any]:
         return json.load(f)
 
 
+def get_run_directories(request_path: str) -> tuple:
+    """Derive run directories from request file path"""
+    request_file = Path(request_path)
+    run_dir = request_file.parent.parent  # inbox/../ = run_dir
+    
+    inbox_dir = run_dir / "inbox"
+    outbox_dir = run_dir / "outbox" 
+    state_dir = run_dir / "state"
+    results_dir = run_dir / "results"
+    
+    return inbox_dir, outbox_dir, state_dir, results_dir
+
+
 def run_strategy_backtest(params: Dict[str, Any]) -> Dict[str, Any]:
     """Run strategy backtest using existing StratVal system"""
     try:
@@ -88,12 +101,12 @@ def run_strategy_backtest(params: Dict[str, Any]) -> Dict[str, Any]:
         }
 
 
-def save_response(request_id: str, response: Dict[str, Any]) -> str:
+def save_response(request_id: str, response: Dict[str, Any], request_path: str) -> str:
     """Save response to outbox"""
-    outbox_dir = Path(__file__).parent.parent / "runs" / "current" / "outbox"
+    _, outbox_dir, _, _ = get_run_directories(request_path)
     outbox_dir.mkdir(parents=True, exist_ok=True)
     
-    response_file = outbox_dir / f"run_experiment_{request_id}.json"
+    response_file = outbox_dir / f"{request_id}.json"
     
     response_with_meta = {
         "request_id": request_id,
@@ -127,7 +140,7 @@ def main():
         result = run_strategy_backtest(params)
         
         # Save response
-        response_file = save_response(request_id, result)
+        response_file = save_response(request_id, result, args.request_file)
         print(f"Results saved to: {response_file}")
         
         # Return 0 for success, 1 for error

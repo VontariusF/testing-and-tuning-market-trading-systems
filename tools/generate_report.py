@@ -25,15 +25,29 @@ def load_request(request_path: str) -> Dict[str, Any]:
         return json.load(f)
 
 
-def load_ranking_results(ranking_files: List[str]) -> List[Dict[str, Any]]:
+def get_run_directories(request_path: str) -> tuple:
+    """Derive run directories from request file path"""
+    request_file = Path(request_path)
+    run_dir = request_file.parent.parent  # inbox/../ = run_dir
+    
+    inbox_dir = run_dir / "inbox"
+    outbox_dir = run_dir / "outbox" 
+    state_dir = run_dir / "state"
+    results_dir = run_dir / "results"
+    
+    return inbox_dir, outbox_dir, state_dir, results_dir
+
+
+def load_ranking_results(ranking_files: List[str], request_path: str) -> List[Dict[str, Any]]:
     """Load ranking results from files"""
     results = []
+    _, outbox_dir, _, _ = get_run_directories(request_path)
     
     for result_file in ranking_files:
         result_path = Path(result_file)
         if not result_path.is_absolute():
-            # Relative to runs/current/outbox
-            result_path = Path(__file__).parent.parent / "runs" / "current" / "outbox" / result_path.name
+            # Relative to run's outbox
+            result_path = outbox_dir / result_path.name
         
         if result_path.exists():
             with open(result_path, 'r') as f:
@@ -345,7 +359,7 @@ def generate_markdown_report(selected_strategy: str, rankings: List[Dict],
     return "\n".join(md_sections)
 
 
-def generate_report(params: Dict[str, Any]) -> Dict[str, Any]:
+def generate_report(params: Dict[str, Any], request_path: str) -> Dict[str, Any]:
     """Main report generation logic"""
     
     selected_strategy = params.get('selected_strategy', 'Unknown Strategy')
@@ -359,7 +373,7 @@ def generate_report(params: Dict[str, Any]) -> Dict[str, Any]:
     # Load ranking results
     rankings = []
     for ranking_file in strategy_rankings:
-        ranking_results = load_ranking_results([ranking_file])
+        ranking_results = load_ranking_results([ranking_file], request_path)
         if ranking_results:
             rankings.extend(ranking_results)
     
@@ -387,7 +401,7 @@ def generate_report(params: Dict[str, Any]) -> Dict[str, Any]:
         if not output_path.endswith(file_extension):
             output_path += file_extension
         
-        report_dir = Path(__file__).parent.parent / "runs" / "current" / "results"
+        _, _, _, report_dir = get_run_directories(args.request_file)
         report_dir.mkdir(parents=True, exist_ok=True)
         
         report_file = report_dir / Path(output_path).name
@@ -411,12 +425,12 @@ def generate_report(params: Dict[str, Any]) -> Dict[str, Any]:
         }
 
 
-def save_response(request_id: str, response: Dict[str, Any]) -> str:
+def save_response(request_id: str, response: Dict[str, Any], request_path: str) -> str:
     """Save response to outbox"""
-    outbox_dir = Path(__file__).parent.parent / "runs" / "current" / "outbox"
+    _, outbox_dir, _, results_dir = get_run_directories(request_path)
     outbox_dir.mkdir(parents=True, exist_ok=True)
     
-    response_file = outbox_dir / f"generate_report_{request_id}.json"
+    response_file = outbox_dir / f"{request_id}.json"
     
     response_with_meta = {
         "request_id": request_id,
@@ -446,10 +460,10 @@ def main():
         print(f"Generating report: {request_id}")
         
         # Execute report generation
-        result = generate_report(params)
+        result = generate_report(params, args.request_file)
         
         # Save response
-        response_file = save_response(request_id, result)
+        response_file = save_response(request_id, result, args.request_file)
         print(f"Report saved to: {response_file}")
         
         if result.get('status') == 'OK':

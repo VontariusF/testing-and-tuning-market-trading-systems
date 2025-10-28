@@ -25,15 +25,29 @@ def load_request(request_path: str) -> Dict[str, Any]:
         return json.load(f)
 
 
-def load_strategy_results(strategy_results: List[str]) -> List[Dict[str, Any]]:
+def get_run_directories(request_path: str) -> tuple:
+    """Derive run directories from request file path"""
+    request_file = Path(request_path)
+    run_dir = request_file.parent.parent  # inbox/../ = run_dir
+    
+    inbox_dir = run_dir / "inbox"
+    outbox_dir = run_dir / "outbox" 
+    state_dir = run_dir / "state"
+    results_dir = run_dir / "results"
+    
+    return inbox_dir, outbox_dir, state_dir, results_dir
+
+
+def load_strategy_results(strategy_results: List[str], request_path: str) -> List[Dict[str, Any]]:
     """Load strategy results from files"""
     results = []
+    _, outbox_dir, _, _ = get_run_directories(request_path)
     
     for result_file in strategy_results:
         result_path = Path(result_file)
         if not result_path.is_absolute():
-            # Relative to runs/current/outbox
-            result_path = Path(__file__).parent.parent / "runs" / "current" / "outbox" / result_path.name
+            # Relative to run's outbox
+            result_path = outbox_dir / result_path.name
         
         if result_path.exists():
             with open(result_path, 'r') as f:
@@ -124,7 +138,7 @@ def analyze_regime_robustness(results: List[Dict[str, Any]]) -> Dict[str, float]
     return {'robustness_score': 0.5}  # Default neutral score
 
 
-def score_strategies(params: Dict[str, Any]) -> Dict[str, Any]:
+def score_strategies(params: Dict[str, Any], request_path: str) -> Dict[str, Any]:
     """Main strategy scoring logic"""
     
     strategy_results = params.get('strategy_results', [])
@@ -142,7 +156,7 @@ def score_strategies(params: Dict[str, Any]) -> Dict[str, Any]:
     weights = methodology.get('weights', default_weights)
     
     # Load strategy results
-    results = load_strategy_results(strategy_results)
+    results = load_strategy_results(strategy_results, request_path)
     
     if not results:
         return {
@@ -263,12 +277,12 @@ def generate_recommendations(rankings: List[Dict], regime_analysis: Dict) -> Lis
     return recommendations
 
 
-def save_response(request_id: str, response: Dict[str, Any]) -> str:
+def save_response(request_id: str, response: Dict[str, Any], request_path: str) -> str:
     """Save response to outbox"""
-    outbox_dir = Path(__file__).parent.parent / "runs" / "current" / "outbox"
+    _, outbox_dir, _, _ = get_run_directories(request_path)
     outbox_dir.mkdir(parents=True, exist_ok=True)
     
-    response_file = outbox_dir / f"score_strategy_{request_id}.json"
+    response_file = outbox_dir / f"{request_id}.json"
     
     response_with_meta = {
         "request_id": request_id,
@@ -298,10 +312,10 @@ def main():
         print(f"Scoring strategies: {request_id}")
         
         # Execute strategy scoring
-        result = score_strategies(params)
+        result = score_strategies(params, args.request_file)
         
         # Save response
-        response_file = save_response(request_id, result)
+        response_file = save_response(request_id, result, args.request_file)
         print(f"Scoring results saved to: {response_file}")
         
         return 0 if result.get('status') == 'OK' else 1

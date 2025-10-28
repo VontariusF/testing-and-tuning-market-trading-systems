@@ -25,15 +25,29 @@ def load_request(request_path: str) -> Dict[str, Any]:
         return json.load(f)
 
 
-def load_experiment_results(result_files: List[str]) -> List[Dict[str, Any]]:
+def get_run_directories(request_path: str) -> tuple:
+    """Derive run directories from request file path"""
+    request_file = Path(request_path)
+    run_dir = request_file.parent.parent  # inbox/../ = run_dir
+    
+    inbox_dir = run_dir / "inbox"
+    outbox_dir = run_dir / "outbox" 
+    state_dir = run_dir / "state"
+    results_dir = run_dir / "results"
+    
+    return inbox_dir, outbox_dir, state_dir, results_dir
+
+
+def load_experiment_results(result_files: List[str], request_path: str) -> List[Dict[str, Any]]:
     """Load experiment results from outbox"""
     results = []
+    _, outbox_dir, _, _ = get_run_directories(request_path)
     
     for result_file in result_files:
         result_path = Path(result_file)
         if not result_path.is_absolute():
-            # Relative to runs/current/outbox
-            result_path = Path(__file__).parent.parent / "runs" / "current" / "outbox" / result_path.name
+            # Relative to run's outbox
+            result_path = outbox_dir / result_path.name
         
         if result_path.exists():
             with open(result_path, 'r') as f:
@@ -124,14 +138,14 @@ def analyze_strategy_patterns(df: pd.DataFrame) -> Dict[str, Any]:
     }
 
 
-def evaluate_features(params: Dict[str, Any]) -> Dict[str, Any]:
+def evaluate_features(params: Dict[str, Any], request_path: str) -> Dict[str, Any]:
     """Main feature evaluation logic"""
     
     experiment_results = params.get('experiment_results', [])
     analysis_depth = params.get('analysis_depth', 'standard')
     
     # Load experiment results
-    results = load_experiment_results(experiment_results)
+    results = load_experiment_results(experiment_results, request_path)
     
     if not results:
         return {
@@ -189,12 +203,12 @@ def evaluate_features(params: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def save_response(request_id: str, response: Dict[str, Any]) -> str:
+def save_response(request_id: str, response: Dict[str, Any], request_path: str) -> str:
     """Save response to outbox"""
-    outbox_dir = Path(__file__).parent.parent / "runs" / "current" / "outbox"
+    _, outbox_dir, _, _ = get_run_directories(request_path)
     outbox_dir.mkdir(parents=True, exist_ok=True)
     
-    response_file = outbox_dir / f"evaluate_features_{request_id}.json"
+    response_file = outbox_dir / f"{request_id}.json"
     
     response_with_meta = {
         "request_id": request_id,
@@ -224,10 +238,10 @@ def main():
         print(f"Evaluating features: {request_id}")
         
         # Execute feature evaluation
-        result = evaluate_features(params)
+        result = evaluate_features(params, args.request_file)
         
         # Save response
-        response_file = save_response(request_id, result)
+        response_file = save_response(request_id, result, args.request_file)
         print(f"Analysis saved to: {response_file}")
         
         return 0 if result.get('status') == 'OK' else 1
