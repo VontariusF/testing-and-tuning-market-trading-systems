@@ -375,7 +375,9 @@ def generate_report(params: Dict[str, Any], request_path: str) -> Dict[str, Any]
     for ranking_file in strategy_rankings:
         ranking_results = load_ranking_results([ranking_file], request_path)
         if ranking_results:
-            rankings.extend(ranking_results)
+            # Extend with the actual rankings array from response, not the entire response
+            for result in ranking_results:
+                rankings.extend(result.get('rankings', []))
     
     # Extract regime analysis (simplified)
     regime_analysis = {
@@ -401,7 +403,7 @@ def generate_report(params: Dict[str, Any], request_path: str) -> Dict[str, Any]
         if not output_path.endswith(file_extension):
             output_path += file_extension
         
-        _, _, _, report_dir = get_run_directories(args.request_file)
+        _, _, _, report_dir = get_run_directories(request_path)
         report_dir.mkdir(parents=True, exist_ok=True)
         
         report_file = report_dir / Path(output_path).name

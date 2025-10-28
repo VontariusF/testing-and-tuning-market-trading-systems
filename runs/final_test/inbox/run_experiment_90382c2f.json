@@ -1,6 +1,6 @@
 {
   "tool": "run_experiment",
-  "request_id": "run_experiment_4f0c21fd",
+  "request_id": "run_experiment_90382c2f",
   "params": {
     "strategy": "Moving average crossover strategy",
     "strategy_type": "moving_average",

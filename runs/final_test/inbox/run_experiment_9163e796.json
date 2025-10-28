@@ -1,6 +1,6 @@
 {
   "tool": "run_experiment",
-  "request_id": "run_experiment_e8fb70fd",
+  "request_id": "run_experiment_9163e796",
   "params": {
     "strategy": "RSI oversold bounce strategy",
     "strategy_type": "rsi",
