@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/binance_to_txt.dir/tools/binance_to_txt.cpp.o -o binance_to_txt

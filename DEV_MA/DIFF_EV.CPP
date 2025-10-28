@@ -518,7 +518,7 @@ FINISHED:
 --------------------------------------------------------------------------------
 */
 
-static double ensure_legal ( int nvars , int nints , double *low_bounds , double *high_bounds , double *params )
+double ensure_legal ( int nvars , int nints , double *low_bounds , double *high_bounds , double *params )
 {
    int i ;
    double penalty ;

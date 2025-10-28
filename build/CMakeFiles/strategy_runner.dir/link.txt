@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/strategy_runner.dir/framework/runner.cpp.o -o strategy_runner  libstrategy_framework.a -lsqlite3

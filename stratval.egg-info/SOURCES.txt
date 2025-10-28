@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+stratval/__init__.py
+stratval.egg-info/PKG-INFO
+stratval.egg-info/SOURCES.txt
+stratval.egg-info/dependency_links.txt
+stratval.egg-info/entry_points.txt
+stratval.egg-info/requires.txt
+stratval.egg-info/top_level.txt

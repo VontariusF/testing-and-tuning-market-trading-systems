@@ -741,18 +741,13 @@ int main (
    printf ( "\n\nCleanedJump  min=%.4lf  max=%.4lf  median=%.4lf  relative entropy=%.3lf",
             cleaned_jump_min, cleaned_jump_max, cleaned_jump_median, cleaned_jump_entropy ) ;
 
-#if 0
-   _getch() ;
+#if 0   // User input removed for automated execution
    for (i=0 ; i<nind ; i++)
-      printf ( "\n%12.5lf %12.5lf", raw_jump[i], cleaned_jump[i] ) ;
-   _getch() ;
+      printf ( "\n%12.5lf %12.5lf", raw_jump[i], cleaned_jump[i] ) ;   // User input removed for automated execution
 #endif
 
 FINISH:
-   if (_heapchk() != _HEAPOK) {
-      printf ( "\nBad heap!" ) ;
-      exit ( 1 ) ;
-      }
+   // Heap check removed for macOS compatibility - optional cheap insurance removed
 
    if (fp != NULL)
       fclose ( fp ) ;
@@ -779,8 +774,8 @@ FINISH:
    if (cleaned_jump != NULL)
       free ( cleaned_jump ) ;
 
-   printf ( "\n\nPress any key..." ) ;
-   _getch () ;  // Wait for user to press a key
+   printf ( "\n\nPress Enter to continue..." ) ;
+   getchar();  // Wait for user to press Enter (macOS compatible)
 
    exit ( 0 ) ;
 }

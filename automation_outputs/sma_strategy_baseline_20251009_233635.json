@@ -1,0 +1,12 @@
+{
+  "name": "sma_strategy",
+  "strategy_type": "sma",
+  "parameters": {
+    "short": 10,
+    "long": 40,
+    "fee": 0.0005,
+    "symbol": "DEMO"
+  },
+  "metadata": {},
+  "source": "framework/sma_strategy.cpp"
+}

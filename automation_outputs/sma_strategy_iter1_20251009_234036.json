@@ -1,0 +1,41 @@
+{
+  "name": "sma_strategy",
+  "strategy_type": "sma",
+  "parameters": {
+    "short": 9,
+    "long": 36,
+    "fee": 0.0005,
+    "symbol": "DEMO"
+  },
+  "metadata": {
+    "walk_forward": {
+      "windows": 4,
+      "step": "monthly"
+    },
+    "generated_files": [
+      "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+      "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+      "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+      "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+      "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json"
+    ],
+    "oos_validation": {
+      "dataset": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt"
+    },
+    "statistical_adjustments": {
+      "correction": "bonferroni",
+      "alpha": 0.01
+    },
+    "parameter_bounds": {
+      "short": [
+        3,
+        20
+      ],
+      "long": [
+        25,
+        80
+      ]
+    }
+  },
+  "source": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp"
+}

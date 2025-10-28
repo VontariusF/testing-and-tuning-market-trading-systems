@@ -1,0 +1,316 @@
+STRATEGY GENERATION & TESTING FRAMEWORK
+=======================================
+
+****************************************************************************************************
+SYSTEMATIC STRATEGY GENERATION & TESTING
+****************************************************************************************************
+Loading market data...
+Loaded 50 bars from data/sample_ohlc.txt
+Data loaded: 50 bars
+
+Generating 10 MACD strategy configurations...
+Generated 10 MACD strategy configurations
+
+Starting batch testing...
+
+================================================================================
+STRATEGY TESTING BATCH - 10 configurations
+================================================================================
+Testing 1/10: MACD (9, 32, 11, 1.10349, -0.64235, 0.00072)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=9, Slow=32, Signal=11, Overbought=1.10349, Oversold=-0.64235, Fee=0.00072
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 2/10: MACD (8, 23, 6, 1.16888, -0.638503, 0.00042)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=8, Slow=23, Signal=6, Overbought=1.16888, Oversold=-0.638503, Fee=0.00042
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 3/10: MACD (12, 32, 8, 0.658303, -0.898714, 0.00028)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=12, Slow=32, Signal=8, Overbought=0.658303, Oversold=-0.898714, Fee=0.00028
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 4/10: MACD (10, 31, 7, 0.834141, -0.584647, 0.00027)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=10, Slow=31, Signal=7, Overbought=0.834141, Oversold=-0.584647, Fee=0.00027
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 5/10: MACD (12, 34, 6, 0.806899, -1.4419, 0.00028)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=12, Slow=34, Signal=6, Overbought=0.806899, Oversold=-1.4419, Fee=0.00028
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 6/10: MACD (14, 30, 5, 0.515109, -0.557969, 0.00091)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=14, Slow=30, Signal=5, Overbought=0.515109, Oversold=-0.557969, Fee=0.00091
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 7/10: MACD (15, 26, 7, 1.40169, -0.87267, 0.00018)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=15, Slow=26, Signal=7, Overbought=1.40169, Oversold=-0.87267, Fee=0.00018
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+
+RISK METRICS:
+  Portfolio Value: $100000
+  Risk per Trade: 2.5%
+  Stop Loss: 4%
+  Take Profit: 12%
+============================================================
+  Result: Return=0%, Sharpe=0, MaxDD=0%, Trades=0
+Testing 8/10: MACD (9, 21, 8, 1.09733, -1.19593, 0.00066)
+
+============================================================
+PHASE 1: DATA INTEGRITY VALIDATION
+============================================================
+🔍 Validating chronological order of 50 bars...
+✅ Chronological Order: All 50 bars are in correct chronological order
+🔍 Validating data integrity of 50 bars...
+   Warning: Large date gap at index 22 (20200131 -> 20200203)
+   Warning: Large date gap at index 42 (20200228 -> 20200302)
+⚠️ Data Integrity: 2 date gaps detected
+🔍 Validating OHLC relationships in 50 bars...
+✅ OHLC Relationships: All 50 bars have valid OHLC relationships
+
+✅ Data validation complete - proceeding with strategy testing
+
+
+============================================================
+MACD MOMENTUM STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Fast=9, Slow=21, Signal=8, Overbought=1.09733, Oversold=-1.19593, Fee=0.00066
+
+PERFORMANCE METRICS:
+  Total Return: 0%
+  Sharpe Ratio: 0
+  Max Drawdown: 0%
+  Total Trades: 0
+
+MACD STATISTICS:
+  Current MACD: 1.27533
+  Current Signal: 0

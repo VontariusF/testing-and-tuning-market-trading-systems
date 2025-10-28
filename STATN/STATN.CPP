@@ -477,10 +477,7 @@ int main (
       }
 
 FINISH:
-   if (_heapchk() != _HEAPOK) {
-      printf ( "\nBad heap!" ) ;
-      exit ( 1 ) ;
-      }
+   // Heap check removed for macOS compatibility - optional cheap insurance removed
 
    if (fp != NULL)
       fclose ( fp ) ;
@@ -499,8 +496,8 @@ FINISH:
    if (volatility != NULL)
       free ( volatility ) ;
 
-   printf ( "\n\nPress any key..." ) ;
-   _getch () ;  // Wait for user to press a key
+   printf ( "\n\nPress Enter to continue..." ) ;
+   getchar();  // Wait for user to press Enter (macOS compatible)
 
    exit ( 0 ) ;
 }

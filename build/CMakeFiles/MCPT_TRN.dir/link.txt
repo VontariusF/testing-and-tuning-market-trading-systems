@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/MCPT_TRN.dir/MCPT_TRN/MCPT_TRN.CPP.o -o MCPT_TRN

@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/CONFTEST.dir/CONFTEST/CONFTEST.CPP.o CMakeFiles/CONFTEST.dir/CONFTEST/QSORTD.CPP.o CMakeFiles/CONFTEST.dir/CONFTEST/RANDOM.CPP.o CMakeFiles/CONFTEST.dir/CONFTEST/STATS.CPP.o CMakeFiles/CONFTEST.dir/CONFTEST/UNIFRAND.CPP.o -o CONFTEST

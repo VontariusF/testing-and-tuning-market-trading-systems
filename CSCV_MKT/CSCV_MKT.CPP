@@ -274,7 +274,8 @@ int main (
    printf ( "\n\nnprices=%d  n_blocks=%d  max_lookback=%d  n_systems=%d  n_returns=%d",
             nprices, n_blocks,  max_lookback, n_systems, n_returns ) ;
    printf ( "\n1000 * Grand criterion = %.4lf  Prob = %.4lf", 1000.0 * best_crit, prob ) ;
-   _getch () ;  // Wait for user to press a key
+   printf ( "\nPress Enter to continue..." );
+   getchar();  // Wait for user to press Enter (macOS compatible)
 
    free ( prices ) ;
    free ( returns ) ;

@@ -1,0 +1,575 @@
+{
+  "validation_mode": "standard",
+  "timestamp": 1760213131.799218,
+  "strategy_path": "./framework/sma_strategy.cpp",
+  "pair": "BTC/USDT",
+  "timeframe": "1h",
+  "data_source": "FreqTrade DB",
+  "strategy_results": {
+    "bars": [
+      {
+        "timestamp": 1757289600,
+        "open": 111137.35,
+        "high": 111293.26,
+        "low": 110733.71,
+        "close": 110837.96,
+        "volume": 553.54548
+      },
+      {
+        "timestamp": 1757293200,
+        "open": 110837.95,
+        "high": 110994.58,
+        "low": 110731.71,
+        "close": 110890.57,
+        "volume": 352.25138
+      },
+      {
+        "timestamp": 1757296800,
+        "open": 110890.58,
+        "high": 111372.0,
+        "low": 110621.78,
+        "close": 111240.0,
+        "volume": 364.1088
+      },
+      {
+        "timestamp": 1757300400,
+        "open": 111239.99,
+        "high": 111349.24,
+        "low": 111026.91,
+        "close": 111052.11,
+        "volume": 431.56519
+      },
+      {
+        "timestamp": 1757304000,
+        "open": 111052.11,
+        "high": 111218.49,
+        "low": 110929.3,
+        "close": 110979.35,
+        "volume": 318.48361
+      },
+      {
+        "timestamp": 1757307600,
+        "open": 110979.35,
+        "high": 111061.05,
+        "low": 110899.69,
+        "close": 111027.16,
+        "volume": 189.25665
+      },
+      {
+        "timestamp": 1757311200,
+        "open": 111027.15,
+        "high": 111197.86,
+        "low": 110917.45,
+        "close": 111113.26,
+        "volume": 156.58167
+      },
+      {
+        "timestamp": 1757314800,
+        "open": 111113.26,
+        "high": 111609.04,
+        "low": 111113.25,
+        "close": 111280.39,
+        "volume": 665.8032
+      },
+      {
+        "timestamp": 1757318400,
+        "open": 111280.4,
+        "high": 111910.48,
+        "low": 111252.9,
+        "close": 111684.25,
+        "volume": 867.092
+      },
+      {
+        "timestamp": 1757322000,
+        "open": 111684.26,
+        "high": 112095.0,
+        "low": 111591.06,
+        "close": 112094.99,
+        "volume": 695.25367
+      },
+      {
+        "timestamp": 1757325600,
+        "open": 112094.99,
+        "high": 112186.98,
+        "low": 111920.89,
+        "close": 112048.0,
+        "volume": 648.82485
+      },
+      {
+        "timestamp": 1757329200,
+        "open": 112048.0,
+        "high": 112121.59,
+        "low": 111754.31,
+        "close": 112052.43,
+        "volume": 512.51734
+      },
+      {
+        "timestamp": 1757332800,
+        "open": 112052.43,
+        "high": 112153.9,
+        "low": 111934.24,
+        "close": 112034.51,
+        "volume": 293.01193
+      },
+      {
+        "timestamp": 1757336400,
+        "open": 112034.5,
+        "high": 112370.3,
+        "low": 111877.64,
+        "close": 111906.55,
+        "volume": 1120.28751
+      },
+      {
+        "timestamp": 1757340000,
+        "open": 111906.56,
+        "high": 112779.5,
+        "low": 111888.0,
+        "close": 112645.05,
+        "volume": 989.95574
+      },
+      {
+        "timestamp": 1757343600,
+        "open": 112645.06,
+        "high": 112924.37,
+        "low": 112526.61,
+        "close": 112631.75,
+        "volume": 614.9683
+      },
+      {
+        "timestamp": 1757347200,
+        "open": 112631.74,
+        "high": 112670.06,
+        "low": 112293.18,
+        "close": 112398.0,
+        "volume": 493.93324
+      },
+      {
+        "timestamp": 1757350800,
+        "open": 112398.01,
+        "high": 112531.6,
+        "low": 112075.2,
+        "close": 112214.4,
+        "volume": 461.27895
+      },
+      {
+        "timestamp": 1757354400,
+        "open": 112214.41,
+        "high": 112515.59,
+        "low": 112184.97,
+        "close": 112477.01,
+        "volume": 296.32443
+      },
+      {
+        "timestamp": 1757358000,
+        "open": 112477.01,
+        "high": 112477.01,
+        "low": 111978.67,
+        "close": 112097.31,
+        "volume": 430.27796
+      },
+      {
+        "timestamp": 1757361600,
+        "open": 112097.31,
+        "high": 112153.07,
+        "low": 111896.0,
+        "close": 111958.04,
+        "volume": 288.87626
+      },
+      {
+        "timestamp": 1757365200,
+        "open": 111958.04,
+        "high": 112331.32,
+        "low": 111930.73,
+        "close": 112326.45,
+        "volume": 273.5437
+      },
+      {
+        "timestamp": 1757368800,
+        "open": 112326.45,
+        "high": 112512.71,
+        "low": 112210.91,
+        "close": 112236.71,
+        "volume": 274.21823
+      },
+      {
+        "timestamp": 1757372400,
+        "open": 112236.71,
+        "high": 112305.03,
+        "low": 111989.0,
+        "close": 112065.23,
+        "volume": 290.44202
+      },
+      {
+        "timestamp": 1757376000,
+        "open": 112065.23,
+        "high": 112104.41,
+        "low": 111459.87,
+        "close": 111650.03,
+        "volume": 720.48199
+      },
+      {
+        "timestamp": 1757379600,
+        "open": 111650.03,
+        "high": 111748.54,
+        "low": 111258.3,
+        "close": 111364.73,
+        "volume": 520.52157
+      },
+      {
+        "timestamp": 1757383200,
+        "open": 111364.73,
+        "high": 111442.95,
+        "low": 111111.0,
+        "close": 111330.71,
+        "volume": 536.02045
+      },
+      {
+        "timestamp": 1757386800,
+        "open": 111330.72,
+        "high": 111740.61,
+        "low": 111234.16,
+        "close": 111708.0,
+        "volume": 314.74637
+      },
+      {
+        "timestamp": 1757390400,
+        "open": 111708.01,
+        "high": 112110.99,
+        "low": 111624.12,
+        "close": 112024.01,
+        "volume": 548.42419
+      },
+      {
+        "timestamp": 1757394000,
+        "open": 112024.01,
+        "high": 112248.84,
+        "low": 111851.52,
+        "close": 112200.0,
+        "volume": 298.70562
+      },
+      {
+        "timestamp": 1757397600,
+        "open": 112200.01,
+        "high": 113156.65,
+        "low": 112151.16,
+        "close": 113022.61,
+        "volume": 1080.72151
+      },
+      {
+        "timestamp": 1757401200,
+        "open": 113022.62,
+        "high": 113293.29,
+        "low": 112753.61,
+        "close": 112991.11,
+        "volume": 978.74308
+      }
+    ],
+    "returns": [
+      0.01,
+      0.01,
+      -0.005,
+      -0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      -0.005,
+      0.01,
+      -0.005,
+      -0.005,
+      0.01,
+      -0.005,
+      -0.005,
+      -0.005,
+      0.01,
+      -0.005,
+      -0.005,
+      0.01,
+      -0.005,
+      -0.005,
+      -0.005,
+      -0.005,
+      -0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      -0.005
+    ],
+    "equity_curve": [
+      100.0,
+      101.0,
+      102.01,
+      101.49995,
+      100.99245025,
+      102.0023747525,
+      103.022398500025,
+      104.05262248502525,
+      105.0931487098755,
+      106.14408019697426,
+      105.61335979598938,
+      106.66949339394928,
+      106.13614592697954,
+      105.60546519734464,
+      106.6615198493181,
+      106.1282122500715,
+      105.59757118882114,
+      105.06958333287703,
+      106.1202791662058,
+      105.58967777037478,
+      105.06172938152291,
+      106.11234667533815,
+      105.58178494196146,
+      105.05387601725165,
+      104.5286066371654,
+      104.00596360397957,
+      103.48593378595967,
+      104.52079312381927,
+      105.56600105505747,
+      106.62166106560805,
+      107.68787767626414,
+      107.14943828788282
+    ],
+    "trades": [
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757289600
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757293200
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757296800
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757300400
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757304000
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757307600
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757311200
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757314800
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757318400
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757322000
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757325600
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757329200
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757332800
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757336400
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757340000
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757343600
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757347200
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757350800
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757354400
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757358000
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757361600
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757365200
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757368800
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757372400
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757376000
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757379600
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757383200
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757386800
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757390400
+      },
+      {
+        "return": 0.01,
+        "pnl": 1.0,
+        "timestamp": 1757394000
+      },
+      {
+        "return": -0.005,
+        "pnl": -0.5,
+        "timestamp": 1757397600
+      }
+    ],
+    "total_return": 0.07149438287882814,
+    "num_bars": 32,
+    "data_source": "FreqTrade DB"
+  },
+  "algorithm_results": {
+    "CD_MA": {
+      "error": "AlgorithmAdapter.execute() got multiple values for argument 'strategy_results'",
+      "market_data_length": 32
+    },
+    "DRAWDOWN": {
+      "error": "AlgorithmAdapter.execute() got multiple values for argument 'strategy_results'",
+      "market_data_length": 32
+    },
+    "MCPT_BARS": {
+      "error": "AlgorithmAdapter.execute() got multiple values for argument 'strategy_results'",
+      "market_data_length": 32
+    },
+    "SELBIAS": {
+      "error": "AlgorithmAdapter.execute() got multiple values for argument 'strategy_results'",
+      "market_data_length": 32
+    },
+    "MCPT_TRN": {
+      "error": "AlgorithmAdapter.execute() got multiple values for argument 'strategy_results'",
+      "market_data_length": 32
+    }
+  },
+  "scores": {
+    "total_score": 54.6,
+    "grade": "F",
+    "performance_score": 61.5,
+    "statistical_score": 0.0,
+    "risk_score": 100.0,
+    "weights_used": {
+      "performance": 0.4,
+      "statistical": 0.3,
+      "risk": 0.3
+    },
+    "recommendations": [
+      "Statistical significance is weak - strategy may be overfit",
+      "Algorithm CD_MA failed - check configuration",
+      "Algorithm DRAWDOWN failed - check configuration",
+      "Algorithm MCPT_BARS failed - check configuration",
+      "Algorithm SELBIAS failed - check configuration",
+      "Algorithm MCPT_TRN failed - check configuration"
+    ],
+    "details": {
+      "performance": {
+        "sharpe_ratio": 4.538811910971765,
+        "total_return": 0.07149438287882792,
+        "volatility": 0.12096387090580446,
+        "max_drawdown": 0.029845080413311423,
+        "win_rate": 0.4838709677419355,
+        "profit_factor": 1.875,
+        "num_trades": 31,
+        "num_returns": 31
+      },
+      "statistical": {
+        "drawdown_95": null,
+        "drawdown_99": null,
+        "mcpt_pvalue": null,
+        "mcpt_skill": null,
+        "mcpt_training_bias": null
+      },
+      "risk": {
+        "max_drawdown": 0.029845080413311423,
+        "volatility": 0.12096387090580446,
+        "drawdown_95": null,
+        "drawdown_99": null,
+        "calmar_ratio": 25.231227157970906
+      }
+    }
+  },
+  "algorithms_run": [
+    "CD_MA",
+    "DRAWDOWN",
+    "MCPT_BARS",
+    "SELBIAS",
+    "MCPT_TRN"
+  ],
+  "data_info": {
+    "pair": "BTC/USDT",
+    "timeframe": "1h",
+    "total_bars": 32
+  }
+}

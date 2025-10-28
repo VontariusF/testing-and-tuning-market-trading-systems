@@ -249,7 +249,7 @@ void do_permute (
 --------------------------------------------------------------------------------
 */
 
-void main ( int argc , char *argv[] )
+int main ( int argc , char *argv[] )
 {
    int i, j, k, return_value, n_markets, full_date, year, month, day ;
    int line_number, date, max_date, all_same_date, n_cases ;

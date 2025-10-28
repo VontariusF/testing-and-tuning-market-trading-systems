@@ -1,0 +1,362 @@
+====================================================================================================
+Comprehensive Exchange Data Loader
+====================================================================================================
+
+Supported formats: JSON, Feather
+Supported exchanges: Binance, BinanceUS, Bybit, Coinbase, Hyperliquid
+
+🔍 Scanning for trading data files...
+   Found 316 files
+
+🔌 Connecting to PostgreSQL...
+✓ Connected successfully
+✓ Table 'exchange_ohlcv' created/verified
+
+📊 Processing 316 files...
+----------------------------------------------------------------------------------------------------
+   1/316 ✓ binanceus       BTC_USDT        1h    spot            3,410 candles
+   2/316 ✓ binanceus       ETH_USDT        15m   spot           17,400 candles
+   3/316 ✓ binanceus       BTC_USDT        5m    spot            8,999 candles
+   4/316 ✓ binanceus       ETH_USDT        1h    spot            3,410 candles
+   5/316 ✓ binanceus       SOL_USDT        15m   spot           56,666 candles
+   6/316 ✓ binanceus       ETH_USDT        5m    spot            8,999 candles
+   7/316 ✓ binanceus       BTC_USDT        15m   spot           17,400 candles
+   8/316 ✓ binanceus       SOL_USDT        1h    spot           14,166 candles
+   9/316 ✓ binance         ADA_USDT        5m    spot          210,478 candles
+  10/316 ✓ binance         SOL_USDT        5m    spot          210,478 candles
+      ✗ Error inserting data: ON CONFLICT DO UPDATE command cannot affect row a second time
+HINT:  Ensure that no rows proposed for insertion within the same command have duplicate constrained values.
+
+  11/316 ✗ Failed: coinbase/BTC_USDT-1h (spot)
+  12/316 ✗ Failed: coinbase/BTC_USDT-1h (spot)
+  13/316 ✓ binance         btc_usdt        1h    spot              100 candles
+  14/316 ✓ hyperliquid     BTC_USDC        4h    spot            6,602 candles
+  15/316 ✓ hyperliquid     BTC_USDC        4h    spot            6,602 candles
+  16/316 ✓ hyperliquid     ETH_USDC        1h    spot           26,408 candles
+  17/316 ✓ hyperliquid     ETH_USDT        4h    spot            6,602 candles
+  18/316 ✓ hyperliquid     BTC_USDT        1h    spot           26,409 candles
+  19/316 ✓ hyperliquid     ETH_USDC        4h    spot            6,602 candles
+  20/316 ✓ hyperliquid     ETH_USDC        1h    spot           26,408 candles
+  21/316 ✓ hyperliquid     ETH_USDT        1h    spot           26,408 candles
+  22/316 ✓ hyperliquid     BTC_USDT        4h    spot            6,602 candles
+  23/316 ✓ hyperliquid     BTC_USDC        1h    spot           26,409 candles
+  24/316 ✓ hyperliquid     ETH_USDC        4h    spot            6,602 candles
+  25/316 ✓ hyperliquid     BTC_USDC        1h    spot           26,409 candles
+  26/316 ✓ coinbase        ETH_USD         1h    spot              728 candles
+  27/316 ✓ coinbase        BTC_USD         1h    spot              727 candles
+  28/316 ✓ bybit           ADA_USDT        4h    mark            4,529 candles
+  29/316 ✓ bybit           ADA_USDT        4h    futures         4,529 candles
+  30/316 ✓ bybit           BTC_USDT        8h    funding_rate    2,264 candles
+  31/316 ✓ bybit           BNB_USDT        4h    mark            4,529 candles
+  32/316 ✓ bybit           SOL_USDT        1h    futures        18,119 candles
+  33/316 ✓ bybit           BNB_USDT        1h    futures        18,119 candles
+  34/316 ✓ bybit           BNB_USDT        8h    funding_rate    2,264 candles
+  35/316 ✓ bybit           SOL_USDT        8h    funding_rate    2,264 candles
+  36/316 ✓ bybit           ETH_USDT        8h    funding_rate    2,264 candles
+  37/316 ✓ bybit           ADA_USDT        8h    funding_rate    2,264 candles
+  38/316 ✓ bybit           SOL_USDT        4h    mark            4,529 candles
+  39/316 ✓ bybit           BTC_USDT        5m    futures       217,440 candles
+  40/316 ✓ bybit           BNB_USDT        4h    futures         4,529 candles
+  41/316 ✓ bybit           SOL_USDT        4h    futures         4,529 candles
+  42/316 ✓ bybit           ADA_USDT        1h    futures        18,119 candles
+  43/316 ✓ bybit           ETH_USDT        5m    futures       217,440 candles
+  44/316 ✓ bybit           BTC_USDT        4h    mark            4,529 candles
+  45/316 ✓ bybit           ETH_USDT        4h    mark            4,529 candles
+  46/316 ✓ bybit           BTC_USDT        1h    futures        18,119 candles
+  47/316 ✓ bybit           ETH_USDT        1h    futures        18,119 candles
+  48/316 ✓ bybit           ADA_USDT        5m    futures       217,440 candles
+  49/316 ✓ bybit           ETH_USDT        4h    futures         4,529 candles
+  50/316 ✓ bybit           BNB_USDT        5m    futures       217,440 candles
+  51/316 ✓ bybit           SOL_USDT        5m    futures       217,440 candles
+  52/316 ✓ bybit           BTC_USDT        4h    futures         4,529 candles
+  53/316 ✓ coinbaseexchange ETH_USD         6h    spot               33 candles
+  54/316 ✓ coinbaseexchange ETH_USD         1h    spot              198 candles
+  55/316 ✓ coinbaseexchange BTC_USD         6h    spot               33 candles
+  56/316 ✓ coinbaseexchange SOL_USD         6h    spot               33 candles
+  57/316 ✓ coinbaseexchange BTC_USD         1h    spot              198 candles
+  58/316 ✓ coinbaseexchange SOL_USD         1h    spot              198 candles
+  59/316 ✓ binance         BTC_USDT        1h    spot               32 candles
+  60/316 ✓ binance         ETH_USDT        1d    futures         2,122 candles
+  61/316 ✓ binance         DOGE_USDT       8h    funding_rate    5,476 candles
+  62/316 ✓ binance         DOGE_USDT       4h    futures        10,952 candles
+  63/316 ✓ binance         ADA_USDT        4h    futures        10,952 candles
+  64/316 ✓ binance         AVAX_USDT       8h    funding_rate    5,465 candles
+  65/316 ✓ binance         BTC_USDT        8h    funding_rate    6,599 candles
+  66/316 ✓ binance         SOL_USDT        1h    futures        43,808 candles
+  67/316 ✓ binance         BNB_USDT        1h    futures        43,808 candles
+  68/316 ✓ binance         BTC_USDT        1d    futures         2,202 candles
+  69/316 ✓ binance         BNB_USDT        8h    funding_rate    5,476 candles
+  70/316 ✓ binance         AVAX_USDT       1h    futures        43,705 candles
+  71/316 ✓ binance         SOL_USDT        8h    funding_rate    5,480 candles
+  72/316 ✓ binance         XRP_USDT        1h    futures        43,808 candles
+  73/316 ✓ binance         ETH_USDT        8h    funding_rate    6,365 candles
+  74/316 ✓ binance         AVAX_USDT       8h    mark            5,466 candles
+  75/316 ✓ binance         ETH_USDT        8h    mark            6,287 candles
+  76/316 ✓ binance         ADA_USDT        8h    funding_rate    5,480 candles
+  77/316 ✓ binance         BTC_USDT        8h    mark            6,287 candles
+  78/316 ✓ binance         BTC_USDT        6h    futures         4,382 candles
+  79/316 ✓ binance         XRP_USDT        4h    futures        10,952 candles
+  80/316 ✓ binance         DOT_USDT        1d    futures         1,825 candles
+  81/316 ✓ binance         AVAX_USDT       4h    futures        10,927 candles
+  82/316 ✓ binance         DOT_USDT        8h    mark            5,476 candles
+  83/316 ✓ binance         ETH_USDT        6h    futures         4,382 candles
+  84/316 ✓ binance         BTC_USDT        5m    futures       517,499 candles
+  85/316 ✓ binance         BNB_USDT        4h    futures        10,952 candles
+  86/316 ✓ binance         SOL_USDT        4h    futures        10,952 candles
+  87/316 ✓ binance         DOGE_USDT       1h    futures        43,808 candles
+  88/316 ✓ binance         ADA_USDT        1h    futures        43,808 candles
+  89/316 ✓ binance         ETH_USDT        5m    futures       517,499 candles
+  90/316 ✓ binance         XRP_USDT        1d    futures         1,825 candles
+  91/316 ✓ binance         DOT_USDT        4h    futures        10,952 candles
+  92/316 ✓ binance         AVAX_USDT       1d    futures         1,821 candles
+  93/316 ✓ binance         DOGE_USDT       8h    mark            5,476 candles
+  94/316 ✓ binance         XRP_USDT        8h    funding_rate    5,476 candles
+  95/316 ✓ binance         ADA_USDT        8h    mark            5,480 candles
+  96/316 ✓ binance         BTC_USDT        1h    futures        52,839 candles
+  97/316 ✓ binance         SOL_USDT        1d    futures         1,825 candles
+  98/316 ✓ binance         BNB_USDT        1d    futures         1,825 candles
+  99/316 ✓ binance         ETH_USDT        1h    futures        50,929 candles
+ 100/316 ✓ binance         ADA_USDT        5m    futures       525,944 candles
+ 101/316 ✓ binance         BNB_USDT        8h    mark            5,476 candles
+ 102/316 ✓ binance         ETH_USDT        4h    futures        12,733 candles
+ 103/316 ✓ binance         DOGE_USDT       1d    futures         1,825 candles
+ 104/316 ✓ binance         ADA_USDT        1d    futures         1,825 candles
+ 105/316 ✓ binance         SOL_USDT        5m    futures       525,943 candles
+ 106/316 ✓ binance         BTC_USDT        4h    futures        13,210 candles
+ 107/316 ✓ binance         SOL_USDT        8h    mark            5,480 candles
+ 108/316 ✓ binance         XRP_USDT        8h    mark            5,476 candles
+ 109/316 ✓ binance         DOT_USDT        1h    futures        43,808 candles
+ 110/316 ✓ binance         DOT_USDT        8h    funding_rate    5,476 candles
+ 111/316 ✓ hyperliquid     BTC_USDC        4h    spot            6,602 candles
+ 112/316 ✓ hyperliquid     BTC_USDC        4h    spot            6,602 candles
+ 113/316 ✓ hyperliquid     ETH_USDC        1h    spot           26,408 candles
+ 114/316 ✓ hyperliquid     ETH_USDT        4h    spot            6,602 candles
+ 115/316 ✓ hyperliquid     BTC_USDT        1h    spot           26,409 candles
+ 116/316 ✓ hyperliquid     ETH_USDC        4h    spot            6,602 candles
+ 117/316 ✓ hyperliquid     ETH_USDC        1h    spot           26,408 candles
+ 118/316 ✓ hyperliquid     ETH_USDT        1h    spot           26,408 candles
+ 119/316 ✓ hyperliquid     BTC_USDT        4h    spot            6,602 candles
+ 120/316 ✓ hyperliquid     BTC_USDC        1h    spot           26,409 candles
+ 121/316 ✓ hyperliquid     ETH_USDC        4h    spot            6,602 candles
+ 122/316 ✓ hyperliquid     BTC_USDC        1h    spot           26,409 candles
+ 123/316 ✓ coinbase        ETH_USD         1h    spot              728 candles
+ 124/316 ✓ coinbase        BTC_USD         1h    spot              727 candles
+ 125/316 ✓ bybit           BTC_USDT        4h    spot            1,206 candles
+ 126/316 ✓ bybit           ETH_USDT        1h    futures         4,866 candles
+ 127/316 ✓ bybit           BTC_USDT        1h    futures         4,866 candles
+ 128/316 ✓ bybit           BTC_USDT        1h    spot            4,826 candles
+ 129/316 ✓ bybit           ETH_USDT        4h    spot            1,206 candles
+ 130/316 ✓ bybit           ETH_USDT        1h    spot            4,826 candles
+ 131/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 132/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 133/316 ✓ bybit           ETH_USDT        1d    futures           929 candles
+ 134/316 ✓ bybit           BTC_USDT        8h    funding_rate      607 candles
+ 135/316 ✓ bybit           BTC_USDT        1d    futures           929 candles
+ 136/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+ 137/316 ✓ bybit           ETH_USDT        8h    funding_rate      607 candles
+ 138/316 ✓ bybit           ETH_USDT        1h    futures         4,868 candles
+ 139/316 ✓ bybit           BTC_USDT        1h    futures         4,868 candles
+ 140/316 ✓ bybit           BTC_USDT        4h    mark            1,217 candles
+ 141/316 ✓ bybit           ETH_USDT        4h    mark            1,217 candles
+ 142/316 ✓ bybit           BTC_USDT        1h    futures         4,868 candles
+ 143/316 ✓ bybit           ETH_USDT        1h    futures         4,868 candles
+ 144/316 ✓ bybit           ETH_USDT        4h    futures         1,217 candles
+ 145/316 ✓ bybit           ETH_USDT        8h    funding_rate      607 candles
+ 146/316 ✓ bybit           BTC_USDT        4h    futures         1,217 candles
+ 147/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 148/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 149/316 ✓ bybit           BTC_USDT        8h    funding_rate      607 candles
+ 150/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+ 151/316 ✓ coinbaseexchange ETH_USD         6h    spot               33 candles
+ 152/316 ✓ coinbaseexchange ETH_USD         1h    spot              198 candles
+ 153/316 ✓ coinbaseexchange BTC_USD         6h    spot               33 candles
+ 154/316 ✓ coinbaseexchange SOL_USD         6h    spot               33 candles
+ 155/316 ✓ coinbaseexchange BTC_USD         1h    spot              198 candles
+ 156/316 ✓ coinbaseexchange SOL_USD         1h    spot              198 candles
+ 157/316 ✓ binance         BTC_USDT        1h    spot               32 candles
+ 158/316 ✓ binance         ETH_USDT        1d    futures         2,083 candles
+ 159/316 ✓ binance         BTC_USDT        8h    funding_rate    3,303 candles
+ 160/316 ✓ binance         BTC_USDT        1d    futures         2,083 candles
+ 161/316 ✓ binance         ETH_USDT        8h    funding_rate    3,303 candles
+ 162/316 ✓ binance         ETH_USDT        8h    mark            3,303 candles
+ 163/316 ✓ binance         BTC_USDT        8h    mark            3,303 candles
+ 164/316 ✓ binance         BTC_USDT        6h    futures         4,382 candles
+ 165/316 ✓ binance         ETH_USDT        6h    futures         4,382 candles
+ 166/316 ✓ binance         BTC_USDT        1h    futures        26,431 candles
+ 167/316 ✓ binance         ETH_USDT        1h    futures        26,431 candles
+ 168/316 ✓ binance         ETH_USDT        4h    futures         6,607 candles
+ 169/316 ✓ binance         BTC_USDT        4h    futures         6,607 candles
+ 170/316 ✓ hyperliquid     BTC_USDC        4h    spot            6,602 candles
+ 171/316 ✓ hyperliquid     BTC_USDC        4h    spot            6,602 candles
+ 172/316 ✓ hyperliquid     ETH_USDC        1h    spot           26,408 candles
+ 173/316 ✓ hyperliquid     ETH_USDT        4h    spot            6,602 candles
+ 174/316 ✓ hyperliquid     BTC_USDT        1h    spot           26,409 candles
+ 175/316 ✓ hyperliquid     ETH_USDC        4h    spot            6,602 candles
+ 176/316 ✓ hyperliquid     ETH_USDC        1h    spot           26,408 candles
+ 177/316 ✓ hyperliquid     ETH_USDT        1h    spot           26,408 candles
+ 178/316 ✓ hyperliquid     BTC_USDT        4h    spot            6,602 candles
+ 179/316 ✓ hyperliquid     BTC_USDC        1h    spot           26,409 candles
+ 180/316 ✓ hyperliquid     ETH_USDC        4h    spot            6,602 candles
+ 181/316 ✓ hyperliquid     BTC_USDC        1h    spot           26,409 candles
+ 182/316 ✓ coinbase        ETH_USD         1h    spot              728 candles
+ 183/316 ✓ coinbase        BTC_USD         1h    spot              727 candles
+ 184/316 ✓ bybit           BTC_USDT        4h    spot            1,206 candles
+ 185/316 ✓ bybit           ETH_USDT        1h    futures         4,866 candles
+ 186/316 ✓ bybit           BTC_USDT        1h    futures         4,866 candles
+ 187/316 ✓ bybit           BTC_USDT        1h    spot            4,826 candles
+ 188/316 ✓ bybit           BTC_USDT        5m    futures       517,499 candles
+ 189/316 ✓ bybit           ETH_USDT        5m    futures       517,499 candles
+ 190/316 ✓ bybit           ETH_USDT        4h    spot            1,206 candles
+ 191/316 ✓ bybit           ETH_USDT        1h    spot            4,826 candles
+ 192/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 193/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 194/316 ✓ bybit           ETH_USDT        1d    futures         2,122 candles
+ 195/316 ✓ bybit           DOGE_USDT       8h    funding_rate    5,476 candles
+ 196/316 ✓ bybit           DOGE_USDT       4h    futures        10,952 candles
+ 197/316 ✓ bybit           ADA_USDT        4h    futures        10,952 candles
+ 198/316 ✓ bybit           AVAX_USDT       8h    funding_rate    5,465 candles
+ 199/316 ✓ bybit           BTC_USDT        8h    funding_rate    6,616 candles
+ 200/316 ✓ bybit           SOL_USDT        1h    futures        43,808 candles
+ 201/316 ✓ bybit           BNB_USDT        1h    futures        43,808 candles
+ 202/316 ✓ bybit           BTC_USDT        1d    futures         2,202 candles
+ 203/316 ✓ bybit           BNB_USDT        8h    funding_rate    5,476 candles
+ 204/316 ✓ bybit           AVAX_USDT       1h    futures        43,705 candles
+ 205/316 ✓ bybit           SOL_USDT        8h    funding_rate    5,476 candles
+ 206/316 ✓ bybit           XRP_USDT        1h    futures        43,808 candles
+ 207/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+ 208/316 ✓ bybit           ETH_USDT        8h    funding_rate    6,382 candles
+ 209/316 ✓ bybit           AVAX_USDT       8h    mark            5,466 candles
+ 210/316 ✓ bybit           ETH_USDT        8h    mark            6,288 candles
+ 211/316 ✓ bybit           ETH_USDT        1h    futures         4,868 candles
+ 212/316 ✓ bybit           ADA_USDT        8h    funding_rate    5,476 candles
+ 213/316 ✓ bybit           BTC_USDT        8h    mark            6,288 candles
+ 214/316 ✓ bybit           BTC_USDT        1h    futures         4,868 candles
+ 215/316 ✓ bybit           BTC_USDT        6h    futures         4,382 candles
+ 216/316 ✓ bybit           XRP_USDT        4h    futures        10,952 candles
+ 217/316 ✓ bybit           DOT_USDT        1d    futures         1,825 candles
+ 218/316 ✓ bybit           AVAX_USDT       4h    futures        10,927 candles
+ 219/316 ✓ bybit           DOT_USDT        8h    mark            5,476 candles
+ 220/316 ✓ bybit           ETH_USDT        6h    futures         4,382 candles
+ 221/316 ✓ bybit           BTC_USDT        5m    futures        52,252 candles
+ 222/316 ✓ bybit           BNB_USDT        4h    futures        10,952 candles
+ 223/316 ✓ bybit           SOL_USDT        4h    futures        10,952 candles
+ 224/316 ✓ bybit           DOGE_USDT       1h    futures        43,808 candles
+ 225/316 ✓ bybit           ADA_USDT        1h    futures        43,808 candles
+ 226/316 ✓ bybit           ETH_USDT        5m    futures        52,748 candles
+ 227/316 ✓ bybit           XRP_USDT        1d    futures         1,825 candles
+ 228/316 ✓ bybit           DOT_USDT        4h    futures        10,952 candles
+ 229/316 ✓ bybit           BTC_USDT        4h    mark            1,252 candles
+ 230/316 ✓ bybit           AVAX_USDT       1d    futures         1,821 candles
+ 231/316 ✓ bybit           ETH_USDT        4h    mark            1,252 candles
+ 232/316 ✓ bybit           DOGE_USDT       8h    mark            5,476 candles
+ 233/316 ✓ bybit           BTC_USDT        15m   futures        17,582 candles
+ 234/316 ✓ bybit           XRP_USDT        8h    funding_rate    5,476 candles
+ 235/316 ✓ bybit           ADA_USDT        8h    mark            5,476 candles
+ 236/316 ✓ bybit           BTC_USDT        1h    futures        52,899 candles
+ 237/316 ✓ bybit           SOL_USDT        1d    futures         1,825 candles
+ 238/316 ✓ bybit           BNB_USDT        1d    futures         1,825 candles
+ 239/316 ✓ bybit           ETH_USDT        1h    futures        50,989 candles
+ 240/316 ✓ bybit           BNB_USDT        8h    mark            5,476 candles
+ 241/316 ✓ bybit           ETH_USDT        4h    futures        12,748 candles
+ 242/316 ✓ bybit           DOGE_USDT       1d    futures         1,825 candles
+ 243/316 ✓ bybit           ADA_USDT        1d    futures         1,825 candles
+ 244/316 ✓ bybit           ETH_USDT        8h    funding_rate      607 candles
+ 245/316 ✓ bybit           ETH_USDT        30m   futures        36,240 candles
+ 246/316 ✓ bybit           BTC_USDT        4h    futures        13,225 candles
+ 247/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 248/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 249/316 ✓ bybit           BTC_USDT        8h    funding_rate      607 candles
+ 250/316 ✓ bybit           ETH_USDT        15m   futures        17,582 candles
+ 251/316 ✓ bybit           SOL_USDT        8h    mark            5,476 candles
+ 252/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+ 253/316 ✓ bybit           XRP_USDT        8h    mark            5,476 candles
+ 254/316 ✓ bybit           DOT_USDT        1h    futures        43,808 candles
+ 255/316 ✓ bybit           DOT_USDT        8h    funding_rate    5,476 candles
+ 256/316 ✓ coinbaseexchange ETH_USD         6h    spot               33 candles
+ 257/316 ✓ coinbaseexchange ETH_USD         1h    spot              198 candles
+ 258/316 ✓ coinbaseexchange BTC_USD         6h    spot               33 candles
+ 259/316 ✓ coinbaseexchange SOL_USD         6h    spot               33 candles
+ 260/316 ✓ coinbaseexchange BTC_USD         1h    spot              198 candles
+ 261/316 ✓ coinbaseexchange SOL_USD         1h    spot              198 candles
+ 262/316 ✓ binance         BTC_USDT        1h    spot               32 candles
+ 263/316 ✓ binance         ETH_USDT        1d    futures         2,122 candles
+ 264/316 ✓ binance         DOGE_USDT       8h    funding_rate    5,476 candles
+ 265/316 ✓ binance         DOGE_USDT       4h    futures        10,952 candles
+ 266/316 ✓ binance         ADA_USDT        4h    futures        10,952 candles
+ 267/316 ✓ binance         AVAX_USDT       8h    funding_rate    5,465 candles
+ 268/316 ✓ binance         BTC_USDT        8h    funding_rate    6,599 candles
+ 269/316 ✓ binance         SOL_USDT        1h    futures        43,808 candles
+ 270/316 ✓ binance         BNB_USDT        1h    futures        43,808 candles
+ 271/316 ✓ binance         BTC_USDT        1d    futures         2,202 candles
+ 272/316 ✓ binance         BNB_USDT        8h    funding_rate    5,476 candles
+ 273/316 ✓ binance         AVAX_USDT       1h    futures        43,705 candles
+ 274/316 ✓ binance         SOL_USDT        8h    funding_rate    5,480 candles
+ 275/316 ✓ binance         XRP_USDT        1h    futures        43,808 candles
+ 276/316 ✓ binance         ETH_USDT        8h    funding_rate    6,365 candles
+ 277/316 ✓ binance         AVAX_USDT       8h    mark            5,466 candles
+ 278/316 ✓ binance         ETH_USDT        8h    mark            6,287 candles
+ 279/316 ✓ binance         ADA_USDT        8h    funding_rate    5,480 candles
+ 280/316 ✓ binance         BTC_USDT        8h    mark            6,287 candles
+ 281/316 ✓ binance         BTC_USDT        6h    futures         4,382 candles
+ 282/316 ✓ binance         XRP_USDT        4h    futures        10,952 candles
+ 283/316 ✓ binance         DOT_USDT        1d    futures         1,825 candles
+ 284/316 ✓ binance         AVAX_USDT       4h    futures        10,927 candles
+ 285/316 ✓ binance         DOT_USDT        8h    mark            5,476 candles
+ 286/316 ✓ binance         ETH_USDT        6h    futures         4,382 candles
+ 287/316 ✓ binance         BTC_USDT        5m    futures       517,499 candles
+ 288/316 ✓ binance         BNB_USDT        4h    futures        10,952 candles
+ 289/316 ✓ binance         SOL_USDT        4h    futures        10,952 candles
+ 290/316 ✓ binance         DOGE_USDT       1h    futures        43,808 candles
+ 291/316 ✓ binance         ADA_USDT        1h    futures        43,808 candles
+ 292/316 ✓ binance         ETH_USDT        5m    futures       517,499 candles
+ 293/316 ✓ binance         XRP_USDT        1d    futures         1,825 candles
+ 294/316 ✓ binance         DOT_USDT        4h    futures        10,952 candles
+ 295/316 ✓ binance         AVAX_USDT       1d    futures         1,821 candles
+ 296/316 ✓ binance         DOGE_USDT       8h    mark            5,476 candles
+ 297/316 ✓ binance         XRP_USDT        8h    funding_rate    5,476 candles
+ 298/316 ✓ binance         ADA_USDT        8h    mark            5,480 candles
+ 299/316 ✓ binance         BTC_USDT        1h    futures        52,839 candles
+ 300/316 ✓ binance         SOL_USDT        1d    futures         1,825 candles
+ 301/316 ✓ binance         BNB_USDT        1d    futures         1,825 candles
+ 302/316 ✓ binance         ETH_USDT        1h    futures        50,929 candles
+ 303/316 ✓ binance         ADA_USDT        5m    futures       525,944 candles
+ 304/316 ✓ binance         BNB_USDT        8h    mark            5,476 candles
+ 305/316 ✓ binance         ETH_USDT        4h    futures        12,733 candles
+ 306/316 ✓ binance         DOGE_USDT       1d    futures         1,825 candles
+ 307/316 ✓ binance         ADA_USDT        1d    futures         1,825 candles
+ 308/316 ✓ binance         SOL_USDT        5m    futures       525,943 candles
+ 309/316 ✓ binance         BTC_USDT        4h    futures        13,210 candles
+ 310/316 ✓ binance         SOL_USDT        8h    mark            5,480 candles
+ 311/316 ✓ binance         XRP_USDT        8h    mark            5,476 candles
+ 312/316 ✓ binance         DOT_USDT        1h    futures        43,808 candles
+ 313/316 ✓ binance         DOT_USDT        8h    funding_rate    5,476 candles
+ 314/316 ✓ binance         BTC_USDT        5m    futures       517,499 candles
+ 315/316 ✓ binance         ETH_USDT        5m    futures       517,499 candles
+ 316/316 ✓ binance         SOL_USDT        5m    futures       525,943 candles
+----------------------------------------------------------------------------------------------------
+
+📈 Summary:
+   Successful: 310/316 files
+   Failed:     6/316 files
+   Total rows: 11,443,418 candles inserted/updated
+
+====================================================================================================
+📊 Database Statistics by Exchange
+====================================================================================================
+
+Exchange             Symbols    Timeframes   Types    Candles         First                Last                
+------------------------------------------------------------------------------------------------------------------------
+binance              10         6            4        3,148,932       2019-09-07 17:00:00  2025-09-20 12:45:00 
+binanceus            3          3            1        130,450         2023-12-31 16:00:00  2025-08-12 23:15:00 
+bybit                9          8            4        2,611,053       2019-09-07 17:00:00  2025-09-27 06:50:00 
+coinbase             2          1            1        1,455           2025-08-09 17:00:00  2025-09-09 00:00:00 
+coinbaseexchange     3          2            1        693             2025-08-31 17:00:00  2025-09-08 22:00:00 
+hyperliquid          4          2            1        132,042         2022-09-09 17:00:00  2025-09-14 01:00:00 
+------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                 6,024,625      
+
+✓ Database connection closed
+
+====================================================================================================
+✅ Data loading complete!
+====================================================================================================

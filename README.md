@@ -1,16 +1,146 @@
-# Apress Source Code
+Overview
 
-This repository accompanies [*Testing and Tuning Market Trading Systems*](https://www.apress.com/9781484241721) by Timothy Masters (Apress, 2018).
+This repository contains a collection of historical trading research programs plus a modernised strategy-testing framework. The CMake build now produces:
 
-[comment]: #cover
-![Cover image](9781484241721.jpg)
+- The original C/C++ algorithms (one executable per directory with `.CPP` files).
+- A reusable strategy framework (`framework/`) with SMA, RSI, and MACD implementations.
+- A CLI runner that instantiates any supported strategy against sample data.
+- A batch tester that can sweep parameter grids for SMA/RSI/MACD and emit comparison tables.
 
-Download the files as a zip using the green button, or clone the repository to your machine using Git.
+What’s Included
 
-## Releases
+- Build system: CMake (C++17)
+- Portability headers: `compat/` (conio/malloc shims, MSVC API replacements)
+- Strategy framework: `framework/strategy.h`, `framework/sma_strategy.cpp`, `framework/rsi_strategy.cpp`, `framework/macd_strategy.cpp`, `framework/strategy_factory.*`, `framework/strategy_tester.*`, `framework/strategy_batch_tester.cpp`
+- CLI runner: `framework/runner.cpp`
+- Sample data: `data/sample_ohlc.txt`, `data/sample_close.txt`
+- Inventory of legacy sources: `ALGORITHMS.md`
 
-Release v1.0 corresponds to the code in the published book, without corrections or updates.
+Quick Start
 
-## Contributions
+1. Configure and build everything:
+   ```bash
+   cmake -S . -B build
+   cmake --build build -j
+   ```
 
-See the file Contributing.md for more information on how you can contribute to this repository.
+2. (Optional) run the CTest smoke suite:
+   ```bash
+   ctest --test-dir build --output-on-failure
+   ```
+
+3. Run a strategy interactively:
+   ```bash
+   ./build/strategy_runner sma data/sample_ohlc.txt --short 5 --long 20 --fee 0.0005 --symbol DEMO
+   ./build/strategy_runner rsi data/sample_ohlc.txt --period 14 --overbought 70 --oversold 30 --confirm 2 --fee 0.0005
+   ./build/strategy_runner macd data/sample_ohlc.txt --fast 12 --slow 26 --signal 9 --overbought 1 --oversold -1 --fee 0.0005
+   ```
+
+4. Launch a batch parameter sweep (strategy options: `SMA`, `RSI`, `MACD`):
+   ```bash
+   ./build/strategy_batch_tester data/sample_ohlc.txt 50 SMA
+   ./build/strategy_batch_tester data/sample_ohlc.txt 30 RSI
+  ./build/strategy_batch_tester data/sample_ohlc.txt 30 MACD
+  ```
+  Results are logged to stdout and summarised in `strategy_test_results.txt`.
+
+5. Automate bias remediation (Python orchestrator):
+   ```bash
+   python3 strategys/automated_bias_remediation.py \
+     --strategy framework/sma_strategy.cpp \
+     --data data/sample_ohlc.txt \
+     --iterations 3 \
+     --output automation_outputs/latest_results.json
+   ```
+   Iteration configs, remediation reports, and out-of-sample splits are written to `automation_outputs/`.
+
+Automated Remediation Enhancements
+
+- Every pipeline invocation now journals strategies, variants, runs, and artifacts into `freqtrade_db` (SQLite). The schema is created automatically; inspect with `sqlite3 freqtrade_db '.tables'`.
+- Generated configs, remediation reports, and OOS datasets are checksummed and traceable via the new `artifacts` table.
+- Use `generate_strategy_batch` to create parameterised strategies at scale:
+  ```python
+  from strategys.automated_bias_remediation import AutomatedBiasRemediator, StrategySpec
+
+  remediator = AutomatedBiasRemediator(".")
+  spec = StrategySpec(
+      base_name="factory_sma",
+      strategy_type="sma",
+      template_path="framework/sma_strategy.cpp",
+      base_parameters={"short": 8, "long": 24, "fee": 0.0005, "symbol": "DEMO"},
+      parameter_grid={"short": [8, 12], "long": [24, 36]},
+      limit=4,
+  )
+  batch_results = remediator.generate_strategy_batch([spec], "data/sample_ohlc.txt", max_iterations=2)
+  ```
+- Generation experiments are recorded in `generation_experiments`, allowing you to audit which specs produced each live variant.
+- Leaderboard scaffolding is available via `StrategyRepository.upsert_leaderboard_entry` for ranking top-performing variants.
+- Job automation is now built-in: enqueue specs with `StrategyRepository.enqueue_job`, then run the controller loop. For ad-hoc runs call the helper script:
+  ```bash
+  ./tools/run_automation.py --workspace /path/to/project --poll-interval 300
+  # add --run-forever to keep polling continuously
+  ```
+
+Selected Executables
+
+- `DRAWDOWN` smoke run example:
+  - `./build/DRAWDOWN 100 50 0.5 0.9 50 50 1`
+- `MCPT_BARS` with sample OHLC:
+  - `./build/MCPT_BARS 10 2 data/sample_ohlc.txt`
+- `CD_MA` with sample close series:
+  - `./build/CD_MA 2 2 2 0.5 data/sample_close.txt`
+
+Strategy Runner
+
+- Built automatically as `strategy_runner`
+- Usage syntax:
+  ```
+  ./build/strategy_runner <strategy> <ohlc_file> [options]
+  ```
+  Supported strategies and options:
+  - `sma`  &rarr; `--short N --long M --fee F --symbol TICKER`
+  - `rsi`  &rarr; `--period N --overbought X --oversold Y --confirm K --fee F --symbol TICKER`
+  - `macd` &rarr; `--fast N --slow M --signal K --overbought X --oversold Y --fee F --symbol TICKER`
+- The runner uses `StrategyFactory::create_strategy` so any additional implementations registered with the factory become available automatically.
+
+Batch Tester
+
+- Built as `strategy_batch_tester`
+- CLI: `./build/strategy_batch_tester <ohlc_file> [num_strategies] [strategy_type]`
+  - `num_strategies` defaults to 50 if omitted.
+  - `strategy_type` defaults to `SMA` if omitted.
+- Each run validates data quality, executes the strategies, prints a ranked comparison table, and writes detailed results to `strategy_test_results.txt`.
+
+Notes
+
+- The compatibility layer avoids changing original sources. On non-Windows platforms it:
+  - Stubs `_kbhit()`/`_getch()` so programs won’t block waiting for keypresses
+  - Maps `fopen_s`, `strcpy_s`, `strcat_s`, `sprintf_s`, and `_int64` to portable equivalents
+  - Provides `malloc.h` and `conio.h` shims
+- Some executables expect specific input formats; sample data aims to be sufficient for smoke runs, not full validation.
+
+Using Binance Futures Data
+
+- Build the converter tool:
+  - `cmake -S . -B build && cmake --build build -j`
+  - This builds `binance_to_txt` in `build/`.
+
+- Convert a single Binance CSV kline file to OHLC format needed by MCPT_BARS:
+  - `./build/binance_to_txt /path/to/Binance/futures/ETHUSDT-1h.csv ohlc_ETHUSDT_1h.txt`
+  - Then run: `./build/MCPT_BARS 300 1000 ohlc_ETHUSDT_1h.txt`
+
+- Convert to close-only format needed by price-based algos (CD_MA, DEV_MA, STATN, BND_RET, CSCV_MKT):
+- `./build/binance_to_txt --close-only /path/to/Binance/futures/ETHUSDT-1h.csv close_ETHUSDT_1h.txt`
+- Then run, for example: `./build/CD_MA 2 10 10 0.5 close_ETHUSDT_1h.txt`
+
+- CSV converter auto-detects the first timestamp column as either ISO (`YYYY-MM-DD HH:MM:SS`) or epoch milliseconds, and ignores extra columns.
+- Batch convert a folder (macOS/Linux):
+  - `mkdir -p converted && for f in /path/to/Binance/futures/*.csv; do base=$(basename "$f" .csv); ./build/binance_to_txt "$f" "converted/${base}.txt"; done`
+
+Feather Inputs (.feather)
+
+- If your Binance data is in Feather format, use the Python converter (requires `pyarrow`):
+  - OHLC: `python3 tools/feather_to_txt.py /path/to/file.feather converted/file_ohlc.txt --mode ohlc`
+  - Close-only: `python3 tools/feather_to_txt.py /path/to/file.feather converted/file_close.txt --mode close`
+  - Column names are auto-detected (`open_time`/`timestamp`, `open`/`high`/`low`/`close`). Override with flags like `--date-col open_time --close-col close` if needed.
+  - Timestamps are parsed from Arrow timestamp, integer epoch (s/ms/us/ns), or ISO strings.

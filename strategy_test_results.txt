@@ -1,0 +1,87 @@
+STRATEGY TESTING RESULTS
+========================
+
+TOP 10 STRATEGIES:
+Rank	Strategy	Return%	Sharpe	MaxDD%	Win%	Trades	Score
+1	MACD	0	0	0	0	0	0.3
+2	MACD	0	0	0	0	0	0.3
+3	MACD	0	0	0	0	0	0.3
+4	MACD	0	0	0	0	0	0.3
+5	MACD	0	0	0	0	0	0.3
+6	MACD	0	0	0	0	0	0.3
+7	MACD	0	0	0	0	0	0.3
+8	MACD	0	0	0	0	0	0.3
+9	MACD	0	0	0	0	0	0.3
+10	MACD	0	0	0	0	0	0.3
+
+DETAILED RESULTS:
+
+--- Strategy 1 ---
+Parameters: 12, 34, 10, 0.503185, -0.968722, 0.00099
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 2 ---
+Parameters: 8, 21, 12, 0.899157, -0.864295, 0.00088
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 3 ---
+Parameters: 11, 22, 9, 1.28607, -1.03677, 0.00076
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 4 ---
+Parameters: 13, 26, 8, 1.02364, -0.743612, 0.00065
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 5 ---
+Parameters: 13, 30, 12, 0.793266, -0.586119, 0.0003
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 6 ---
+Parameters: 10, 28, 6, 0.700508, -0.554046, 0.0008
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 7 ---
+Parameters: 13, 29, 8, 0.982172, -0.63241, 0.00025
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 8 ---
+Parameters: 12, 30, 7, 0.883215, -0.808491, 0.00103
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 9 ---
+Parameters: 9, 34, 6, 1.28516, -1.23402, 0.00016
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3
+
+--- Strategy 10 ---
+Parameters: 10, 27, 9, 1.07562, -0.979377, 0.00058
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.3

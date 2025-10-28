@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstrategy_framework.a CMakeFiles/strategy_framework.dir/framework/sma_strategy.cpp.o CMakeFiles/strategy_framework.dir/framework/strategy_factory.cpp.o CMakeFiles/strategy_framework.dir/framework/rsi_strategy.cpp.o CMakeFiles/strategy_framework.dir/framework/macd_strategy.cpp.o
+/usr/bin/ranlib libstrategy_framework.a

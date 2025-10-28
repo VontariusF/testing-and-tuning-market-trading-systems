@@ -129,7 +129,7 @@ int main (
 {
    int i, ntries, itry, nsamps, nboot, divisor, ndone ;
    int low2p5, high2p5, low5, high5, low10, high10 ;
-   double prob, true_pf, true_sr, *x, *xwork, *work2, *param ;
+   double prob, true_pf_val, true_sr, *x, *xwork, *work2, *param ;
    double *low2p5_1, *high2p5_1, *low5_1, *high5_1, *low10_1, *high10_1 ;
    double *low2p5_2, *high2p5_2, *low5_2, *high5_2, *low10_2, *high10_2 ;
    double *low2p5_3, *high2p5_3, *low5_3, *high5_3, *low10_3, *high10_3 ;
@@ -168,9 +168,9 @@ int main (
       exit ( 1 ) ;
       }
 
-   true_pf = prob / (1.0 - prob) ;  // Definition
+   true_pf_val = prob / (1.0 - prob) ;  // Definition
    if (use_log)
-      true_pf = log ( true_pf ) ;
+      true_pf_val = log ( true_pf_val ) ;
 
    divisor = 10000000 / (nsamps * nboot) ;  // This is for progress reports only
    if (divisor < 2)
@@ -258,9 +258,9 @@ int main (
          mean_param /= ndone ;
 
          if (use_log)
-            sprintf_s ( line1, "Mean log pf = %.5lf true = %.5lf", mean_param, true_pf ) ;
+            snprintf ( line1, sizeof(line1), "Mean log pf = %.5lf true = %.5lf", mean_param, true_pf_val ) ;
          else
-            sprintf_s ( line1, "Mean pf = %.5lf true = %.5lf", mean_param, true_pf ) ;
+            snprintf ( line1, sizeof(line1), "Mean pf = %.5lf true = %.5lf", mean_param, true_pf_val ) ;
          printf ( "\n%s", line1 ) ;
 
 /*
@@ -269,20 +269,20 @@ int main (
 
          low2p5 = high2p5 = low5 = high5 = low10 = high10 = 0 ;
          for (i=0 ; i<ndone ; i++) {
-            if (low2p5_1[i] > true_pf)
+            if (low2p5_1[i] > true_pf_val)
                ++low2p5 ;
-            if (high2p5_1[i] < true_pf)
+            if (high2p5_1[i] < true_pf_val)
                ++high2p5 ;
-            if (low5_1[i] > true_pf)
+            if (low5_1[i] > true_pf_val)
                ++low5 ;
-            if (high5_1[i] < true_pf)
+            if (high5_1[i] < true_pf_val)
                ++high5 ;
-            if (low10_1[i] > true_pf)
+            if (low10_1[i] > true_pf_val)
                ++low10 ;
-            if (high10_1[i] < true_pf)
+            if (high10_1[i] < true_pf_val)
                ++high10 ;
             }
-         sprintf_s ( line2,
+         snprintf ( line2, sizeof(line2),
             "Pctile 2.5: (%4.2lf %4.2lf)  5: (%4.2lf %4.2lf)  10: (%5.2lf %5.2lf)",
             100.0 * low2p5 / ndone , 100.0 * high2p5 / ndone ,
             100.0 * low5 / ndone , 100.0 * high5 / ndone ,
@@ -295,20 +295,20 @@ int main (
 
          low2p5 = high2p5 = low5 = high5 = low10 = high10 = 0 ;
          for (i=0 ; i<ndone ; i++) {
-            if (low2p5_2[i] > true_pf)
+            if (low2p5_2[i] > true_pf_val)
                ++low2p5 ;
-            if (high2p5_2[i] < true_pf)
+            if (high2p5_2[i] < true_pf_val)
                ++high2p5 ;
-            if (low5_2[i] > true_pf)
+            if (low5_2[i] > true_pf_val)
                ++low5 ;
-            if (high5_2[i] < true_pf)
+            if (high5_2[i] < true_pf_val)
                ++high5 ;
-            if (low10_2[i] > true_pf)
+            if (low10_2[i] > true_pf_val)
                ++low10 ;
-            if (high10_2[i] < true_pf)
+            if (high10_2[i] < true_pf_val)
                ++high10 ;
             }
-         sprintf_s ( line3,
+         snprintf ( line3, sizeof(line3),
             "BCa    2.5: (%4.2lf %4.2lf)  5: (%4.2lf %4.2lf)  10: (%5.2lf %5.2lf)",
             100.0 * low2p5 / ndone , 100.0 * high2p5 / ndone ,
             100.0 * low5 / ndone , 100.0 * high5 / ndone ,
@@ -321,20 +321,20 @@ int main (
 
          low2p5 = high2p5 = low5 = high5 = low10 = high10 = 0 ;
          for (i=0 ; i<ndone ; i++) {
-            if (low2p5_3[i] > true_pf)
+            if (low2p5_3[i] > true_pf_val)
                ++low2p5 ;
-            if (high2p5_3[i] < true_pf)
+            if (high2p5_3[i] < true_pf_val)
                ++high2p5 ;
-            if (low5_3[i] > true_pf)
+            if (low5_3[i] > true_pf_val)
                ++low5 ;
-            if (high5_3[i] < true_pf)
+            if (high5_3[i] < true_pf_val)
                ++high5 ;
-            if (low10_3[i] > true_pf)
+            if (low10_3[i] > true_pf_val)
                ++low10 ;
-            if (high10_3[i] < true_pf)
+            if (high10_3[i] < true_pf_val)
                ++high10 ;
             }
-         sprintf_s ( line4,
+         snprintf ( line4, sizeof(line4),
             "Pivot  2.5: (%4.2lf %4.2lf)  5: (%4.2lf %4.2lf)  10: (%5.2lf %5.2lf)",
             100.0 * low2p5 / ndone , 100.0 * high2p5 / ndone ,
             100.0 * low5 / ndone , 100.0 * high5 / ndone ,
@@ -343,10 +343,11 @@ int main (
          } // If progress report
 
       if ((itry % 10) == 1) {    // This lets the user press ESCape to abort computation
-         if (_kbhit ()) {
-            if (_getch() == 27)
-               break ;
-            }
+         // Removed for macOS compatibility - user can use Ctrl+C to abort
+         // if (_kbhit ()) {
+         //    if (false)  // ESC key check removed
+         //       break ;
+         // }
          }
 
       } // For all tries for profit factor
@@ -491,10 +492,11 @@ int main (
          } // If progress report
 
       if ((itry % 10) == 1) {
-         if (_kbhit ()) {
-            if (_getch() == 27)
-               break ;
-            }
+         // Removed for macOS compatibility - user can use Ctrl+C to abort
+         // if (_kbhit ()) {
+         //    if (false)  // ESC key check removed
+         //       break ;
+         // }
          }
 
       } // For all tries
@@ -512,7 +514,7 @@ int main (
 
    printf ( "\n\nnsamps=%d  nboot=%d  ntries=%d  prob=%.3lf",
             nsamps, nboot, ntries, prob ) ;
-   printf ( "\nPress any key..." ) ;
-   _getch () ;
+   printf ( "\nPress Enter to continue..." ) ;
+   getchar();  // Wait for user to press Enter (macOS compatible)
    return EXIT_SUCCESS ;
 }

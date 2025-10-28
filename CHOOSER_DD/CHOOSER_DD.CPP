@@ -245,7 +245,7 @@ double criterion ( int which , int n , double *prices )
 --------------------------------------------------------------------------------
 */
 
-void main ( int argc , char *argv[] )
+int main ( int argc , char *argv[] )
 {
    int i, j, k, n, iboot, return_value, n_markets, full_date, year, month, day ;
    int line_number, date, max_date, all_same_date, n_cases, divisor ;
@@ -935,11 +935,7 @@ FINISH:
    if (fpList != NULL)
       fclose ( fpList ) ;
 
-   if (_heapchk() != _HEAPOK) {       // This is optional cheap insurance.  Pull it if you wish.
-      fprintf ( fpReport, "\nBad heap!" ) ;
-      fclose ( fpReport ) ;
-      exit ( 1 ) ;
-      }
+   // Heap check removed for macOS compatibility - optional cheap insurance removed
 
    for (i=0 ; i<n_markets ; i++) {
       if (market_date != NULL  &&  market_date[i] != NULL)

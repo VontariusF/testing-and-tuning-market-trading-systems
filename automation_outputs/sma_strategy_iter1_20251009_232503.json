@@ -1,0 +1,34 @@
+{
+  "name": "sma_strategy",
+  "strategy_type": "sma",
+  "parameters": {
+    "short": 9,
+    "long": 36,
+    "fee": 0.0005,
+    "symbol": "DEMO"
+  },
+  "metadata": {
+    "walk_forward": {
+      "windows": 4,
+      "step": "monthly"
+    },
+    "oos_validation": {
+      "dataset": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt"
+    },
+    "statistical_adjustments": {
+      "correction": "bonferroni",
+      "alpha": 0.01
+    },
+    "parameter_bounds": {
+      "short": [
+        3,
+        20
+      ],
+      "long": [
+        25,
+        80
+      ]
+    }
+  },
+  "source": "framework/sma_strategy.cpp"
+}

@@ -1,0 +1,2499 @@
+{
+  "original_strategy": "framework/sma_strategy.cpp",
+  "iterations": [
+    {
+      "iteration": 0,
+      "config_path": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_baseline_20251009_234036.json",
+      "strategy_config": {
+        "name": "sma_strategy",
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 10,
+          "long": 40,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "metadata": {},
+        "source": "framework/sma_strategy.cpp"
+      },
+      "validation_results": {
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 10,
+          "long": 40,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "raw_output": "Starting SMA Crossover Strategy with DEMO\nFile: data/sample_ohlc.txt\nProcessed 50 lines, 50 valid bars\n\n============================================================\nSMA CROSSOVER STRATEGY RESULTS\n============================================================\nSymbol: DEMO\nParameters: Short=10, Long=40, Fee=0.0005\n\nPERFORMANCE METRICS:\n  Total Return: 0.034181%\n  Sharpe Ratio: -53.9917\n  Max Drawdown: 0.001%\n  Total Trades: 1\n  Win Rate: 100%\n  Avg Win: $34.181\n  Avg Loss: $0\n  Total Fees: $2.0181\n\nRISK METRICS:\n  Portfolio Value: $100034\n  Risk per Trade: 2%\n  Stop Loss: 2%\n  Take Profit: 6%\n============================================================\n\n=== STRATEGY SUMMARY ===\nStrategy: SMA Crossover Strategy\nSymbol: DEMO\nTotal Return: 0.034181%\nSharpe Ratio: -53.9917\nMax Drawdown: 0.001%\nTotal Trades: 1\n",
+        "performance_metrics": {
+          "total_return": 0.00034181,
+          "sharpe_ratio": -53.9917,
+          "max_drawdown": 1e-05,
+          "total_trades": 1,
+          "win_rate": 1.0
+        },
+        "strategy_results": {
+          "market_data": [
+            {
+              "date": 20200102,
+              "open": 100.0,
+              "high": 101.0,
+              "low": 99.5,
+              "close": 100.5,
+              "volume": 1000000.0
+            },
+            {
+              "date": 20200103,
+              "open": 100.5,
+              "high": 101.2,
+              "low": 100.0,
+              "close": 101.0,
+              "volume": 1100000.0
+            },
+            {
+              "date": 20200106,
+              "open": 101.0,
+              "high": 101.5,
+              "low": 100.25,
+              "close": 101.25,
+              "volume": 1200000.0
+            },
+            {
+              "date": 20200107,
+              "open": 101.25,
+              "high": 101.75,
+              "low": 100.8,
+              "close": 101.6,
+              "volume": 1300000.0
+            },
+            {
+              "date": 20200108,
+              "open": 101.6,
+              "high": 102.1,
+              "low": 101.2,
+              "close": 101.9,
+              "volume": 1400000.0
+            },
+            {
+              "date": 20200109,
+              "open": 101.9,
+              "high": 102.5,
+              "low": 101.7,
+              "close": 102.4,
+              "volume": 1500000.0
+            },
+            {
+              "date": 20200110,
+              "open": 102.4,
+              "high": 102.8,
+              "low": 101.9,
+              "close": 102.1,
+              "volume": 1600000.0
+            },
+            {
+              "date": 20200113,
+              "open": 102.1,
+              "high": 102.6,
+              "low": 101.7,
+              "close": 102.5,
+              "volume": 1700000.0
+            },
+            {
+              "date": 20200114,
+              "open": 102.5,
+              "high": 103.0,
+              "low": 102.1,
+              "close": 102.8,
+              "volume": 1800000.0
+            },
+            {
+              "date": 20200115,
+              "open": 102.8,
+              "high": 103.4,
+              "low": 102.6,
+              "close": 103.2,
+              "volume": 1900000.0
+            },
+            {
+              "date": 20200116,
+              "open": 103.2,
+              "high": 103.8,
+              "low": 102.8,
+              "close": 103.5,
+              "volume": 2000000.0
+            },
+            {
+              "date": 20200117,
+              "open": 103.5,
+              "high": 104.0,
+              "low": 103.1,
+              "close": 103.9,
+              "volume": 2100000.0
+            },
+            {
+              "date": 20200120,
+              "open": 103.9,
+              "high": 104.3,
+              "low": 103.4,
+              "close": 104.1,
+              "volume": 2200000.0
+            },
+            {
+              "date": 20200121,
+              "open": 104.1,
+              "high": 104.7,
+              "low": 103.9,
+              "close": 104.5,
+              "volume": 2300000.0
+            },
+            {
+              "date": 20200122,
+              "open": 104.5,
+              "high": 105.0,
+              "low": 104.1,
+              "close": 104.8,
+              "volume": 2400000.0
+            },
+            {
+              "date": 20200123,
+              "open": 104.8,
+              "high": 105.2,
+              "low": 104.3,
+              "close": 104.6,
+              "volume": 2500000.0
+            },
+            {
+              "date": 20200124,
+              "open": 104.6,
+              "high": 105.1,
+              "low": 104.2,
+              "close": 104.9,
+              "volume": 2600000.0
+            },
+            {
+              "date": 20200127,
+              "open": 104.9,
+              "high": 105.4,
+              "low": 104.6,
+              "close": 105.2,
+              "volume": 2700000.0
+            },
+            {
+              "date": 20200128,
+              "open": 105.2,
+              "high": 105.8,
+              "low": 104.9,
+              "close": 105.6,
+              "volume": 2800000.0
+            },
+            {
+              "date": 20200129,
+              "open": 105.6,
+              "high": 106.1,
+              "low": 105.2,
+              "close": 105.9,
+              "volume": 2900000.0
+            },
+            {
+              "date": 20200130,
+              "open": 105.9,
+              "high": 106.3,
+              "low": 105.5,
+              "close": 106.1,
+              "volume": 3000000.0
+            },
+            {
+              "date": 20200131,
+              "open": 106.1,
+              "high": 106.6,
+              "low": 105.8,
+              "close": 106.4,
+              "volume": 3100000.0
+            },
+            {
+              "date": 20200203,
+              "open": 106.4,
+              "high": 106.9,
+              "low": 106.0,
+              "close": 106.7,
+              "volume": 3200000.0
+            },
+            {
+              "date": 20200204,
+              "open": 106.7,
+              "high": 107.2,
+              "low": 106.4,
+              "close": 107.0,
+              "volume": 3300000.0
+            },
+            {
+              "date": 20200205,
+              "open": 107.0,
+              "high": 107.5,
+              "low": 106.7,
+              "close": 107.3,
+              "volume": 3400000.0
+            },
+            {
+              "date": 20200206,
+              "open": 107.3,
+              "high": 107.8,
+              "low": 107.0,
+              "close": 107.6,
+              "volume": 3500000.0
+            },
+            {
+              "date": 20200207,
+              "open": 107.6,
+              "high": 108.1,
+              "low": 107.3,
+              "close": 107.9,
+              "volume": 3600000.0
+            },
+            {
+              "date": 20200210,
+              "open": 107.9,
+              "high": 108.4,
+              "low": 107.6,
+              "close": 108.2,
+              "volume": 3700000.0
+            },
+            {
+              "date": 20200211,
+              "open": 108.2,
+              "high": 108.6,
+              "low": 107.9,
+              "close": 108.4,
+              "volume": 3800000.0
+            },
+            {
+              "date": 20200212,
+              "open": 108.4,
+              "high": 108.8,
+              "low": 108.1,
+              "close": 108.6,
+              "volume": 3900000.0
+            },
+            {
+              "date": 20200213,
+              "open": 108.6,
+              "high": 109.0,
+              "low": 108.3,
+              "close": 108.8,
+              "volume": 4000000.0
+            },
+            {
+              "date": 20200214,
+              "open": 108.8,
+              "high": 109.2,
+              "low": 108.5,
+              "close": 109.0,
+              "volume": 4100000.0
+            },
+            {
+              "date": 20200217,
+              "open": 109.0,
+              "high": 109.5,
+              "low": 108.7,
+              "close": 109.2,
+              "volume": 4200000.0
+            },
+            {
+              "date": 20200218,
+              "open": 109.2,
+              "high": 109.7,
+              "low": 108.9,
+              "close": 109.4,
+              "volume": 4300000.0
+            },
+            {
+              "date": 20200219,
+              "open": 109.4,
+              "high": 109.9,
+              "low": 109.1,
+              "close": 109.6,
+              "volume": 4400000.0
+            },
+            {
+              "date": 20200220,
+              "open": 109.6,
+              "high": 110.1,
+              "low": 109.3,
+              "close": 109.8,
+              "volume": 4500000.0
+            },
+            {
+              "date": 20200221,
+              "open": 109.8,
+              "high": 110.3,
+              "low": 109.5,
+              "close": 110.0,
+              "volume": 4600000.0
+            },
+            {
+              "date": 20200224,
+              "open": 110.0,
+              "high": 110.4,
+              "low": 109.7,
+              "close": 110.1,
+              "volume": 4700000.0
+            },
+            {
+              "date": 20200225,
+              "open": 110.1,
+              "high": 110.6,
+              "low": 109.8,
+              "close": 110.3,
+              "volume": 4800000.0
+            },
+            {
+              "date": 20200226,
+              "open": 110.3,
+              "high": 110.8,
+              "low": 110.0,
+              "close": 110.5,
+              "volume": 4900000.0
+            },
+            {
+              "date": 20200227,
+              "open": 110.5,
+              "high": 111.0,
+              "low": 110.2,
+              "close": 110.7,
+              "volume": 5000000.0
+            },
+            {
+              "date": 20200228,
+              "open": 110.7,
+              "high": 111.1,
+              "low": 110.4,
+              "close": 110.9,
+              "volume": 5100000.0
+            },
+            {
+              "date": 20200302,
+              "open": 110.9,
+              "high": 111.3,
+              "low": 110.6,
+              "close": 111.1,
+              "volume": 5200000.0
+            },
+            {
+              "date": 20200303,
+              "open": 111.1,
+              "high": 111.6,
+              "low": 110.8,
+              "close": 111.3,
+              "volume": 5300000.0
+            },
+            {
+              "date": 20200304,
+              "open": 111.3,
+              "high": 111.8,
+              "low": 111.0,
+              "close": 111.5,
+              "volume": 5400000.0
+            },
+            {
+              "date": 20200305,
+              "open": 111.5,
+              "high": 112.0,
+              "low": 111.2,
+              "close": 111.7,
+              "volume": 5500000.0
+            },
+            {
+              "date": 20200306,
+              "open": 111.7,
+              "high": 112.1,
+              "low": 111.4,
+              "close": 111.9,
+              "volume": 5600000.0
+            },
+            {
+              "date": 20200309,
+              "open": 111.9,
+              "high": 112.3,
+              "low": 111.6,
+              "close": 112.1,
+              "volume": 5700000.0
+            },
+            {
+              "date": 20200310,
+              "open": 112.1,
+              "high": 112.5,
+              "low": 111.8,
+              "close": 112.3,
+              "volume": 5800000.0
+            },
+            {
+              "date": 20200311,
+              "open": 112.3,
+              "high": 112.7,
+              "low": 112.0,
+              "close": 112.5,
+              "volume": 5900000.0
+            }
+          ],
+          "returns": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0018099547511312153,
+            0.0018066847335140857,
+            0.0018034265103696878,
+            0.0018001800180018623,
+            0.0017969451931716396,
+            0.0017937219730941312,
+            0.001790510295434311,
+            0.0017873100983019086,
+            0.001784121320249854,
+            0.0017809439002671734
+          ],
+          "equity_curve": [
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100180.99547511312,
+            100361.99095022625,
+            100542.98642533936,
+            100723.98190045249,
+            100904.97737556562,
+            101085.97285067874,
+            101266.96832579187,
+            101447.96380090497,
+            101628.9592760181,
+            101809.95475113123
+          ],
+          "total_return": 0.018099547511312375,
+          "total_trades": 1
+        },
+        "algorithm_results": {
+          "SELBIAS": {
+            "bias_metrics": {
+              "detected_bias": "OOS=0.0001  Selection bias=0.1341  t=0.000"
+            }
+          }
+        }
+      },
+      "biases_detected": [
+        "selection_bias"
+      ]
+    },
+    {
+      "iteration": 1,
+      "config_path": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_iter1_20251009_234036.json",
+      "strategy_config": {
+        "name": "sma_strategy",
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 9,
+          "long": 36,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "metadata": {
+          "walk_forward": {
+            "windows": 4,
+            "step": "monthly"
+          },
+          "generated_files": [
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json"
+          ],
+          "oos_validation": {
+            "dataset": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt"
+          },
+          "statistical_adjustments": {
+            "correction": "bonferroni",
+            "alpha": 0.01
+          },
+          "parameter_bounds": {
+            "short": [
+              3,
+              20
+            ],
+            "long": [
+              25,
+              80
+            ]
+          }
+        },
+        "source": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp"
+      },
+      "validation_results": {
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 9,
+          "long": 36,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "raw_output": "Starting SMA Crossover Strategy with DEMO\nFile: data/sample_ohlc.txt\nProcessed 50 lines, 50 valid bars\n\n============================================================\nSMA CROSSOVER STRATEGY RESULTS\n============================================================\nSymbol: DEMO\nParameters: Short=9, Long=36, Fee=0.0005\n\nPERFORMANCE METRICS:\n  Total Return: 0.0471557%\n  Sharpe Ratio: -59.7288\n  Max Drawdown: 0.001%\n  Total Trades: 1\n  Win Rate: 100%\n  Avg Win: $47.1557\n  Avg Loss: $0\n  Total Fees: $2.02459\n\nRISK METRICS:\n  Portfolio Value: $100047\n  Risk per Trade: 2%\n  Stop Loss: 2%\n  Take Profit: 6%\n============================================================\n\n=== STRATEGY SUMMARY ===\nStrategy: SMA Crossover Strategy\nSymbol: DEMO\nTotal Return: 0.0471557%\nSharpe Ratio: -59.7288\nMax Drawdown: 0.001%\nTotal Trades: 1\n",
+        "performance_metrics": {
+          "total_return": 0.000471557,
+          "sharpe_ratio": -59.7288,
+          "max_drawdown": 1e-05,
+          "total_trades": 1,
+          "win_rate": 1.0
+        },
+        "strategy_results": {
+          "market_data": [
+            {
+              "date": 20200102,
+              "open": 100.0,
+              "high": 101.0,
+              "low": 99.5,
+              "close": 100.5,
+              "volume": 1000000.0
+            },
+            {
+              "date": 20200103,
+              "open": 100.5,
+              "high": 101.2,
+              "low": 100.0,
+              "close": 101.0,
+              "volume": 1100000.0
+            },
+            {
+              "date": 20200106,
+              "open": 101.0,
+              "high": 101.5,
+              "low": 100.25,
+              "close": 101.25,
+              "volume": 1200000.0
+            },
+            {
+              "date": 20200107,
+              "open": 101.25,
+              "high": 101.75,
+              "low": 100.8,
+              "close": 101.6,
+              "volume": 1300000.0
+            },
+            {
+              "date": 20200108,
+              "open": 101.6,
+              "high": 102.1,
+              "low": 101.2,
+              "close": 101.9,
+              "volume": 1400000.0
+            },
+            {
+              "date": 20200109,
+              "open": 101.9,
+              "high": 102.5,
+              "low": 101.7,
+              "close": 102.4,
+              "volume": 1500000.0
+            },
+            {
+              "date": 20200110,
+              "open": 102.4,
+              "high": 102.8,
+              "low": 101.9,
+              "close": 102.1,
+              "volume": 1600000.0
+            },
+            {
+              "date": 20200113,
+              "open": 102.1,
+              "high": 102.6,
+              "low": 101.7,
+              "close": 102.5,
+              "volume": 1700000.0
+            },
+            {
+              "date": 20200114,
+              "open": 102.5,
+              "high": 103.0,
+              "low": 102.1,
+              "close": 102.8,
+              "volume": 1800000.0
+            },
+            {
+              "date": 20200115,
+              "open": 102.8,
+              "high": 103.4,
+              "low": 102.6,
+              "close": 103.2,
+              "volume": 1900000.0
+            },
+            {
+              "date": 20200116,
+              "open": 103.2,
+              "high": 103.8,
+              "low": 102.8,
+              "close": 103.5,
+              "volume": 2000000.0
+            },
+            {
+              "date": 20200117,
+              "open": 103.5,
+              "high": 104.0,
+              "low": 103.1,
+              "close": 103.9,
+              "volume": 2100000.0
+            },
+            {
+              "date": 20200120,
+              "open": 103.9,
+              "high": 104.3,
+              "low": 103.4,
+              "close": 104.1,
+              "volume": 2200000.0
+            },
+            {
+              "date": 20200121,
+              "open": 104.1,
+              "high": 104.7,
+              "low": 103.9,
+              "close": 104.5,
+              "volume": 2300000.0
+            },
+            {
+              "date": 20200122,
+              "open": 104.5,
+              "high": 105.0,
+              "low": 104.1,
+              "close": 104.8,
+              "volume": 2400000.0
+            },
+            {
+              "date": 20200123,
+              "open": 104.8,
+              "high": 105.2,
+              "low": 104.3,
+              "close": 104.6,
+              "volume": 2500000.0
+            },
+            {
+              "date": 20200124,
+              "open": 104.6,
+              "high": 105.1,
+              "low": 104.2,
+              "close": 104.9,
+              "volume": 2600000.0
+            },
+            {
+              "date": 20200127,
+              "open": 104.9,
+              "high": 105.4,
+              "low": 104.6,
+              "close": 105.2,
+              "volume": 2700000.0
+            },
+            {
+              "date": 20200128,
+              "open": 105.2,
+              "high": 105.8,
+              "low": 104.9,
+              "close": 105.6,
+              "volume": 2800000.0
+            },
+            {
+              "date": 20200129,
+              "open": 105.6,
+              "high": 106.1,
+              "low": 105.2,
+              "close": 105.9,
+              "volume": 2900000.0
+            },
+            {
+              "date": 20200130,
+              "open": 105.9,
+              "high": 106.3,
+              "low": 105.5,
+              "close": 106.1,
+              "volume": 3000000.0
+            },
+            {
+              "date": 20200131,
+              "open": 106.1,
+              "high": 106.6,
+              "low": 105.8,
+              "close": 106.4,
+              "volume": 3100000.0
+            },
+            {
+              "date": 20200203,
+              "open": 106.4,
+              "high": 106.9,
+              "low": 106.0,
+              "close": 106.7,
+              "volume": 3200000.0
+            },
+            {
+              "date": 20200204,
+              "open": 106.7,
+              "high": 107.2,
+              "low": 106.4,
+              "close": 107.0,
+              "volume": 3300000.0
+            },
+            {
+              "date": 20200205,
+              "open": 107.0,
+              "high": 107.5,
+              "low": 106.7,
+              "close": 107.3,
+              "volume": 3400000.0
+            },
+            {
+              "date": 20200206,
+              "open": 107.3,
+              "high": 107.8,
+              "low": 107.0,
+              "close": 107.6,
+              "volume": 3500000.0
+            },
+            {
+              "date": 20200207,
+              "open": 107.6,
+              "high": 108.1,
+              "low": 107.3,
+              "close": 107.9,
+              "volume": 3600000.0
+            },
+            {
+              "date": 20200210,
+              "open": 107.9,
+              "high": 108.4,
+              "low": 107.6,
+              "close": 108.2,
+              "volume": 3700000.0
+            },
+            {
+              "date": 20200211,
+              "open": 108.2,
+              "high": 108.6,
+              "low": 107.9,
+              "close": 108.4,
+              "volume": 3800000.0
+            },
+            {
+              "date": 20200212,
+              "open": 108.4,
+              "high": 108.8,
+              "low": 108.1,
+              "close": 108.6,
+              "volume": 3900000.0
+            },
+            {
+              "date": 20200213,
+              "open": 108.6,
+              "high": 109.0,
+              "low": 108.3,
+              "close": 108.8,
+              "volume": 4000000.0
+            },
+            {
+              "date": 20200214,
+              "open": 108.8,
+              "high": 109.2,
+              "low": 108.5,
+              "close": 109.0,
+              "volume": 4100000.0
+            },
+            {
+              "date": 20200217,
+              "open": 109.0,
+              "high": 109.5,
+              "low": 108.7,
+              "close": 109.2,
+              "volume": 4200000.0
+            },
+            {
+              "date": 20200218,
+              "open": 109.2,
+              "high": 109.7,
+              "low": 108.9,
+              "close": 109.4,
+              "volume": 4300000.0
+            },
+            {
+              "date": 20200219,
+              "open": 109.4,
+              "high": 109.9,
+              "low": 109.1,
+              "close": 109.6,
+              "volume": 4400000.0
+            },
+            {
+              "date": 20200220,
+              "open": 109.6,
+              "high": 110.1,
+              "low": 109.3,
+              "close": 109.8,
+              "volume": 4500000.0
+            },
+            {
+              "date": 20200221,
+              "open": 109.8,
+              "high": 110.3,
+              "low": 109.5,
+              "close": 110.0,
+              "volume": 4600000.0
+            },
+            {
+              "date": 20200224,
+              "open": 110.0,
+              "high": 110.4,
+              "low": 109.7,
+              "close": 110.1,
+              "volume": 4700000.0
+            },
+            {
+              "date": 20200225,
+              "open": 110.1,
+              "high": 110.6,
+              "low": 109.8,
+              "close": 110.3,
+              "volume": 4800000.0
+            },
+            {
+              "date": 20200226,
+              "open": 110.3,
+              "high": 110.8,
+              "low": 110.0,
+              "close": 110.5,
+              "volume": 4900000.0
+            },
+            {
+              "date": 20200227,
+              "open": 110.5,
+              "high": 111.0,
+              "low": 110.2,
+              "close": 110.7,
+              "volume": 5000000.0
+            },
+            {
+              "date": 20200228,
+              "open": 110.7,
+              "high": 111.1,
+              "low": 110.4,
+              "close": 110.9,
+              "volume": 5100000.0
+            },
+            {
+              "date": 20200302,
+              "open": 110.9,
+              "high": 111.3,
+              "low": 110.6,
+              "close": 111.1,
+              "volume": 5200000.0
+            },
+            {
+              "date": 20200303,
+              "open": 111.1,
+              "high": 111.6,
+              "low": 110.8,
+              "close": 111.3,
+              "volume": 5300000.0
+            },
+            {
+              "date": 20200304,
+              "open": 111.3,
+              "high": 111.8,
+              "low": 111.0,
+              "close": 111.5,
+              "volume": 5400000.0
+            },
+            {
+              "date": 20200305,
+              "open": 111.5,
+              "high": 112.0,
+              "low": 111.2,
+              "close": 111.7,
+              "volume": 5500000.0
+            },
+            {
+              "date": 20200306,
+              "open": 111.7,
+              "high": 112.1,
+              "low": 111.4,
+              "close": 111.9,
+              "volume": 5600000.0
+            },
+            {
+              "date": 20200309,
+              "open": 111.9,
+              "high": 112.3,
+              "low": 111.6,
+              "close": 112.1,
+              "volume": 5700000.0
+            },
+            {
+              "date": 20200310,
+              "open": 112.1,
+              "high": 112.5,
+              "low": 111.8,
+              "close": 112.3,
+              "volume": 5800000.0
+            },
+            {
+              "date": 20200311,
+              "open": 112.3,
+              "high": 112.7,
+              "low": 112.0,
+              "close": 112.5,
+              "volume": 5900000.0
+            }
+          ],
+          "returns": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0018214936247722413,
+            0.0009090909090907484,
+            0.0018165304268846771,
+            0.0018132366273799772,
+            0.0018099547511312153,
+            0.0018066847335140857,
+            0.0018034265103696878,
+            0.0018001800180018623,
+            0.0017969451931716396,
+            0.0017937219730941312,
+            0.001790510295434311,
+            0.0017873100983019086,
+            0.001784121320249854,
+            0.0017809439002671734
+          ],
+          "equity_curve": [
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100182.14936247723,
+            100273.22404371583,
+            100455.37340619307,
+            100637.52276867031,
+            100819.67213114754,
+            101001.82149362478,
+            101183.97085610201,
+            101366.12021857925,
+            101548.26958105649,
+            101730.41894353372,
+            101912.56830601096,
+            102094.71766848817,
+            102276.86703096541,
+            102459.01639344265
+          ],
+          "total_return": 0.02459016393442659,
+          "total_trades": 1
+        },
+        "algorithm_results": {
+          "SELBIAS": {
+            "bias_metrics": {
+              "detected_bias": "OOS=0.0001  Selection bias=0.1357  t=0.000"
+            }
+          }
+        }
+      },
+      "applied_fixes": [
+        "Walk-forward optimization applied",
+        "Out-of-sample validation enforced",
+        "Multiple testing corrections applied",
+        "Parameter space reduction applied"
+      ],
+      "improvement_metrics": {
+        "sharpe_improvement": -5.737099999999998,
+        "bias_reduction": -0.0015999999999999903,
+        "trade_consistency": 1.0
+      },
+      "remaining_biases": [
+        "selection_bias"
+      ],
+      "remediation_plan": {
+        "detected_biases": [
+          "selection_bias"
+        ],
+        "remediation_steps": [
+          "Implement walk-forward optimization instead of single-period optimization",
+          "Use out-of-sample validation on unseen data segments",
+          "Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)",
+          "Reduce parameter optimization space to prevent over-searching"
+        ],
+        "suggested_improvements": [
+          "Split data into training/validation/out-of-sample sets (60/20/20)",
+          "Use cross-validation with rolling time windows",
+          "Implement parameter stability tests across market regimes",
+          "Add economic rationale constraints to parameter selection"
+        ],
+        "validation_recommendations": [
+          "Verify Sharpe ratio remains stable out-of-sample",
+          "Check parameter distributions are reasonable",
+          "Validate against random parameter sets (reality check test)",
+          "Test strategy on different market regimes"
+        ],
+        "summary": "Bias Remediation Summary\n========================\n\nDetected Biases: 1\nRecommended Actions: 4\n\nPriority Actions:\nImplement walk-forward optimization instead of single-period optimization Use out-of-sample validation on unseen data segments Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)\n\nThis remediation plan addresses potential data-mining artifacts and ensures\nstrategy robustness through proper validation and testing procedures.\n\nCritical Success Factors:\n\u2022 Implement walk-forward testing immediately\n\u2022 Apply multiple testing corrections\n\u2022 Focus on out-of-sample performance\n\u2022 Validate economic rationale regularly"
+      }
+    },
+    {
+      "iteration": 2,
+      "config_path": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_iter2_20251009_234036.json",
+      "strategy_config": {
+        "name": "sma_strategy",
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 8,
+          "long": 33,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "metadata": {
+          "walk_forward": {
+            "windows": 4,
+            "step": "monthly"
+          },
+          "generated_files": [
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json"
+          ],
+          "oos_validation": {
+            "dataset": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt"
+          },
+          "statistical_adjustments": {
+            "correction": "bonferroni",
+            "alpha": 0.01
+          },
+          "parameter_bounds": {
+            "short": [
+              3,
+              20
+            ],
+            "long": [
+              25,
+              80
+            ]
+          }
+        },
+        "source": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp"
+      },
+      "validation_results": {
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 8,
+          "long": 33,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "raw_output": "Starting SMA Crossover Strategy with DEMO\nFile: data/sample_ohlc.txt\nProcessed 50 lines, 50 valid bars\n\n============================================================\nSMA CROSSOVER STRATEGY RESULTS\n============================================================\nSymbol: DEMO\nParameters: Short=8, Long=33, Fee=0.0005\n\nPERFORMANCE METRICS:\n  Total Return: 0.0584093%\n  Sharpe Ratio: -63.6158\n  Max Drawdown: 0.001%\n  Total Trades: 1\n  Win Rate: 100%\n  Avg Win: $58.4093\n  Avg Loss: $0\n  Total Fees: $2.03022\n\nRISK METRICS:\n  Portfolio Value: $100058\n  Risk per Trade: 2%\n  Stop Loss: 2%\n  Take Profit: 6%\n============================================================\n\n=== STRATEGY SUMMARY ===\nStrategy: SMA Crossover Strategy\nSymbol: DEMO\nTotal Return: 0.0584093%\nSharpe Ratio: -63.6158\nMax Drawdown: 0.001%\nTotal Trades: 1\n",
+        "performance_metrics": {
+          "total_return": 0.0005840929999999999,
+          "sharpe_ratio": -63.6158,
+          "max_drawdown": 1e-05,
+          "total_trades": 1,
+          "win_rate": 1.0
+        },
+        "strategy_results": {
+          "market_data": [
+            {
+              "date": 20200102,
+              "open": 100.0,
+              "high": 101.0,
+              "low": 99.5,
+              "close": 100.5,
+              "volume": 1000000.0
+            },
+            {
+              "date": 20200103,
+              "open": 100.5,
+              "high": 101.2,
+              "low": 100.0,
+              "close": 101.0,
+              "volume": 1100000.0
+            },
+            {
+              "date": 20200106,
+              "open": 101.0,
+              "high": 101.5,
+              "low": 100.25,
+              "close": 101.25,
+              "volume": 1200000.0
+            },
+            {
+              "date": 20200107,
+              "open": 101.25,
+              "high": 101.75,
+              "low": 100.8,
+              "close": 101.6,
+              "volume": 1300000.0
+            },
+            {
+              "date": 20200108,
+              "open": 101.6,
+              "high": 102.1,
+              "low": 101.2,
+              "close": 101.9,
+              "volume": 1400000.0
+            },
+            {
+              "date": 20200109,
+              "open": 101.9,
+              "high": 102.5,
+              "low": 101.7,
+              "close": 102.4,
+              "volume": 1500000.0
+            },
+            {
+              "date": 20200110,
+              "open": 102.4,
+              "high": 102.8,
+              "low": 101.9,
+              "close": 102.1,
+              "volume": 1600000.0
+            },
+            {
+              "date": 20200113,
+              "open": 102.1,
+              "high": 102.6,
+              "low": 101.7,
+              "close": 102.5,
+              "volume": 1700000.0
+            },
+            {
+              "date": 20200114,
+              "open": 102.5,
+              "high": 103.0,
+              "low": 102.1,
+              "close": 102.8,
+              "volume": 1800000.0
+            },
+            {
+              "date": 20200115,
+              "open": 102.8,
+              "high": 103.4,
+              "low": 102.6,
+              "close": 103.2,
+              "volume": 1900000.0
+            },
+            {
+              "date": 20200116,
+              "open": 103.2,
+              "high": 103.8,
+              "low": 102.8,
+              "close": 103.5,
+              "volume": 2000000.0
+            },
+            {
+              "date": 20200117,
+              "open": 103.5,
+              "high": 104.0,
+              "low": 103.1,
+              "close": 103.9,
+              "volume": 2100000.0
+            },
+            {
+              "date": 20200120,
+              "open": 103.9,
+              "high": 104.3,
+              "low": 103.4,
+              "close": 104.1,
+              "volume": 2200000.0
+            },
+            {
+              "date": 20200121,
+              "open": 104.1,
+              "high": 104.7,
+              "low": 103.9,
+              "close": 104.5,
+              "volume": 2300000.0
+            },
+            {
+              "date": 20200122,
+              "open": 104.5,
+              "high": 105.0,
+              "low": 104.1,
+              "close": 104.8,
+              "volume": 2400000.0
+            },
+            {
+              "date": 20200123,
+              "open": 104.8,
+              "high": 105.2,
+              "low": 104.3,
+              "close": 104.6,
+              "volume": 2500000.0
+            },
+            {
+              "date": 20200124,
+              "open": 104.6,
+              "high": 105.1,
+              "low": 104.2,
+              "close": 104.9,
+              "volume": 2600000.0
+            },
+            {
+              "date": 20200127,
+              "open": 104.9,
+              "high": 105.4,
+              "low": 104.6,
+              "close": 105.2,
+              "volume": 2700000.0
+            },
+            {
+              "date": 20200128,
+              "open": 105.2,
+              "high": 105.8,
+              "low": 104.9,
+              "close": 105.6,
+              "volume": 2800000.0
+            },
+            {
+              "date": 20200129,
+              "open": 105.6,
+              "high": 106.1,
+              "low": 105.2,
+              "close": 105.9,
+              "volume": 2900000.0
+            },
+            {
+              "date": 20200130,
+              "open": 105.9,
+              "high": 106.3,
+              "low": 105.5,
+              "close": 106.1,
+              "volume": 3000000.0
+            },
+            {
+              "date": 20200131,
+              "open": 106.1,
+              "high": 106.6,
+              "low": 105.8,
+              "close": 106.4,
+              "volume": 3100000.0
+            },
+            {
+              "date": 20200203,
+              "open": 106.4,
+              "high": 106.9,
+              "low": 106.0,
+              "close": 106.7,
+              "volume": 3200000.0
+            },
+            {
+              "date": 20200204,
+              "open": 106.7,
+              "high": 107.2,
+              "low": 106.4,
+              "close": 107.0,
+              "volume": 3300000.0
+            },
+            {
+              "date": 20200205,
+              "open": 107.0,
+              "high": 107.5,
+              "low": 106.7,
+              "close": 107.3,
+              "volume": 3400000.0
+            },
+            {
+              "date": 20200206,
+              "open": 107.3,
+              "high": 107.8,
+              "low": 107.0,
+              "close": 107.6,
+              "volume": 3500000.0
+            },
+            {
+              "date": 20200207,
+              "open": 107.6,
+              "high": 108.1,
+              "low": 107.3,
+              "close": 107.9,
+              "volume": 3600000.0
+            },
+            {
+              "date": 20200210,
+              "open": 107.9,
+              "high": 108.4,
+              "low": 107.6,
+              "close": 108.2,
+              "volume": 3700000.0
+            },
+            {
+              "date": 20200211,
+              "open": 108.2,
+              "high": 108.6,
+              "low": 107.9,
+              "close": 108.4,
+              "volume": 3800000.0
+            },
+            {
+              "date": 20200212,
+              "open": 108.4,
+              "high": 108.8,
+              "low": 108.1,
+              "close": 108.6,
+              "volume": 3900000.0
+            },
+            {
+              "date": 20200213,
+              "open": 108.6,
+              "high": 109.0,
+              "low": 108.3,
+              "close": 108.8,
+              "volume": 4000000.0
+            },
+            {
+              "date": 20200214,
+              "open": 108.8,
+              "high": 109.2,
+              "low": 108.5,
+              "close": 109.0,
+              "volume": 4100000.0
+            },
+            {
+              "date": 20200217,
+              "open": 109.0,
+              "high": 109.5,
+              "low": 108.7,
+              "close": 109.2,
+              "volume": 4200000.0
+            },
+            {
+              "date": 20200218,
+              "open": 109.2,
+              "high": 109.7,
+              "low": 108.9,
+              "close": 109.4,
+              "volume": 4300000.0
+            },
+            {
+              "date": 20200219,
+              "open": 109.4,
+              "high": 109.9,
+              "low": 109.1,
+              "close": 109.6,
+              "volume": 4400000.0
+            },
+            {
+              "date": 20200220,
+              "open": 109.6,
+              "high": 110.1,
+              "low": 109.3,
+              "close": 109.8,
+              "volume": 4500000.0
+            },
+            {
+              "date": 20200221,
+              "open": 109.8,
+              "high": 110.3,
+              "low": 109.5,
+              "close": 110.0,
+              "volume": 4600000.0
+            },
+            {
+              "date": 20200224,
+              "open": 110.0,
+              "high": 110.4,
+              "low": 109.7,
+              "close": 110.1,
+              "volume": 4700000.0
+            },
+            {
+              "date": 20200225,
+              "open": 110.1,
+              "high": 110.6,
+              "low": 109.8,
+              "close": 110.3,
+              "volume": 4800000.0
+            },
+            {
+              "date": 20200226,
+              "open": 110.3,
+              "high": 110.8,
+              "low": 110.0,
+              "close": 110.5,
+              "volume": 4900000.0
+            },
+            {
+              "date": 20200227,
+              "open": 110.5,
+              "high": 111.0,
+              "low": 110.2,
+              "close": 110.7,
+              "volume": 5000000.0
+            },
+            {
+              "date": 20200228,
+              "open": 110.7,
+              "high": 111.1,
+              "low": 110.4,
+              "close": 110.9,
+              "volume": 5100000.0
+            },
+            {
+              "date": 20200302,
+              "open": 110.9,
+              "high": 111.3,
+              "low": 110.6,
+              "close": 111.1,
+              "volume": 5200000.0
+            },
+            {
+              "date": 20200303,
+              "open": 111.1,
+              "high": 111.6,
+              "low": 110.8,
+              "close": 111.3,
+              "volume": 5300000.0
+            },
+            {
+              "date": 20200304,
+              "open": 111.3,
+              "high": 111.8,
+              "low": 111.0,
+              "close": 111.5,
+              "volume": 5400000.0
+            },
+            {
+              "date": 20200305,
+              "open": 111.5,
+              "high": 112.0,
+              "low": 111.2,
+              "close": 111.7,
+              "volume": 5500000.0
+            },
+            {
+              "date": 20200306,
+              "open": 111.7,
+              "high": 112.1,
+              "low": 111.4,
+              "close": 111.9,
+              "volume": 5600000.0
+            },
+            {
+              "date": 20200309,
+              "open": 111.9,
+              "high": 112.3,
+              "low": 111.6,
+              "close": 112.1,
+              "volume": 5700000.0
+            },
+            {
+              "date": 20200310,
+              "open": 112.1,
+              "high": 112.5,
+              "low": 111.8,
+              "close": 112.3,
+              "volume": 5800000.0
+            },
+            {
+              "date": 20200311,
+              "open": 112.3,
+              "high": 112.7,
+              "low": 112.0,
+              "close": 112.5,
+              "volume": 5900000.0
+            }
+          ],
+          "returns": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.001831501831501825,
+            0.001828153564899404,
+            0.0018248175182482562,
+            0.0018214936247722413,
+            0.0009090909090907484,
+            0.0018165304268846771,
+            0.0018132366273799772,
+            0.0018099547511312153,
+            0.0018066847335140857,
+            0.0018034265103696878,
+            0.0018001800180018623,
+            0.0017969451931716396,
+            0.0017937219730941312,
+            0.001790510295434311,
+            0.0017873100983019086,
+            0.001784121320249854,
+            0.0017809439002671734
+          ],
+          "equity_curve": [
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100183.15018315018,
+            100366.30036630036,
+            100549.45054945056,
+            100732.60073260074,
+            100824.1758241758,
+            101007.32600732599,
+            101190.47619047618,
+            101373.62637362636,
+            101556.77655677656,
+            101739.92673992674,
+            101923.07692307694,
+            102106.22710622712,
+            102289.3772893773,
+            102472.5274725275,
+            102655.67765567766,
+            102838.82783882786,
+            103021.97802197804
+          ],
+          "total_return": 0.030219780219780334,
+          "total_trades": 1
+        },
+        "algorithm_results": {
+          "SELBIAS": {
+            "bias_metrics": {
+              "detected_bias": "OOS=0.0001  Selection bias=0.1370  t=0.000"
+            }
+          }
+        }
+      },
+      "applied_fixes": [
+        "Walk-forward optimization applied",
+        "Out-of-sample validation enforced",
+        "Multiple testing corrections applied",
+        "Parameter space reduction applied"
+      ],
+      "improvement_metrics": {
+        "sharpe_improvement": -3.8870000000000005,
+        "bias_reduction": -0.0013000000000000234,
+        "trade_consistency": 1.0
+      },
+      "remaining_biases": [
+        "selection_bias"
+      ],
+      "remediation_plan": {
+        "detected_biases": [
+          "selection_bias"
+        ],
+        "remediation_steps": [
+          "Implement walk-forward optimization instead of single-period optimization",
+          "Use out-of-sample validation on unseen data segments",
+          "Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)",
+          "Reduce parameter optimization space to prevent over-searching"
+        ],
+        "suggested_improvements": [
+          "Split data into training/validation/out-of-sample sets (60/20/20)",
+          "Use cross-validation with rolling time windows",
+          "Implement parameter stability tests across market regimes",
+          "Add economic rationale constraints to parameter selection"
+        ],
+        "validation_recommendations": [
+          "Verify Sharpe ratio remains stable out-of-sample",
+          "Check parameter distributions are reasonable",
+          "Validate against random parameter sets (reality check test)",
+          "Test strategy on different market regimes"
+        ],
+        "summary": "Bias Remediation Summary\n========================\n\nDetected Biases: 1\nRecommended Actions: 4\n\nPriority Actions:\nImplement walk-forward optimization instead of single-period optimization Use out-of-sample validation on unseen data segments Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)\n\nThis remediation plan addresses potential data-mining artifacts and ensures\nstrategy robustness through proper validation and testing procedures.\n\nCritical Success Factors:\n\u2022 Implement walk-forward testing immediately\n\u2022 Apply multiple testing corrections\n\u2022 Focus on out-of-sample performance\n\u2022 Validate economic rationale regularly"
+      }
+    },
+    {
+      "iteration": 3,
+      "config_path": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_iter3_20251009_234036.json",
+      "strategy_config": {
+        "name": "sma_strategy",
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 7,
+          "long": 30,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "metadata": {
+          "walk_forward": {
+            "windows": 4,
+            "step": "monthly"
+          },
+          "generated_files": [
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+            "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json"
+          ],
+          "oos_validation": {
+            "dataset": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt"
+          },
+          "statistical_adjustments": {
+            "correction": "bonferroni",
+            "alpha": 0.01
+          },
+          "parameter_bounds": {
+            "short": [
+              3,
+              20
+            ],
+            "long": [
+              25,
+              80
+            ]
+          }
+        },
+        "source": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp"
+      },
+      "validation_results": {
+        "strategy_type": "sma",
+        "parameters": {
+          "short": 7,
+          "long": 30,
+          "fee": 0.0005,
+          "symbol": "DEMO"
+        },
+        "raw_output": "Starting SMA Crossover Strategy with DEMO\nFile: data/sample_ohlc.txt\nProcessed 50 lines, 50 valid bars\n\n============================================================\nSMA CROSSOVER STRATEGY RESULTS\n============================================================\nSymbol: DEMO\nParameters: Short=7, Long=30, Fee=0.0005\n\nPERFORMANCE METRICS:\n  Total Return: 0.0697873%\n  Sharpe Ratio: -67.1642\n  Max Drawdown: 0.001%\n  Total Trades: 1\n  Win Rate: 100%\n  Avg Win: $69.7873\n  Avg Loss: $0\n  Total Fees: $2.03591\n\nRISK METRICS:\n  Portfolio Value: $100070\n  Risk per Trade: 2%\n  Stop Loss: 2%\n  Take Profit: 6%\n============================================================\n\n=== STRATEGY SUMMARY ===\nStrategy: SMA Crossover Strategy\nSymbol: DEMO\nTotal Return: 0.0697873%\nSharpe Ratio: -67.1642\nMax Drawdown: 0.001%\nTotal Trades: 1\n",
+        "performance_metrics": {
+          "total_return": 0.000697873,
+          "sharpe_ratio": -67.1642,
+          "max_drawdown": 1e-05,
+          "total_trades": 1,
+          "win_rate": 1.0
+        },
+        "strategy_results": {
+          "market_data": [
+            {
+              "date": 20200102,
+              "open": 100.0,
+              "high": 101.0,
+              "low": 99.5,
+              "close": 100.5,
+              "volume": 1000000.0
+            },
+            {
+              "date": 20200103,
+              "open": 100.5,
+              "high": 101.2,
+              "low": 100.0,
+              "close": 101.0,
+              "volume": 1100000.0
+            },
+            {
+              "date": 20200106,
+              "open": 101.0,
+              "high": 101.5,
+              "low": 100.25,
+              "close": 101.25,
+              "volume": 1200000.0
+            },
+            {
+              "date": 20200107,
+              "open": 101.25,
+              "high": 101.75,
+              "low": 100.8,
+              "close": 101.6,
+              "volume": 1300000.0
+            },
+            {
+              "date": 20200108,
+              "open": 101.6,
+              "high": 102.1,
+              "low": 101.2,
+              "close": 101.9,
+              "volume": 1400000.0
+            },
+            {
+              "date": 20200109,
+              "open": 101.9,
+              "high": 102.5,
+              "low": 101.7,
+              "close": 102.4,
+              "volume": 1500000.0
+            },
+            {
+              "date": 20200110,
+              "open": 102.4,
+              "high": 102.8,
+              "low": 101.9,
+              "close": 102.1,
+              "volume": 1600000.0
+            },
+            {
+              "date": 20200113,
+              "open": 102.1,
+              "high": 102.6,
+              "low": 101.7,
+              "close": 102.5,
+              "volume": 1700000.0
+            },
+            {
+              "date": 20200114,
+              "open": 102.5,
+              "high": 103.0,
+              "low": 102.1,
+              "close": 102.8,
+              "volume": 1800000.0
+            },
+            {
+              "date": 20200115,
+              "open": 102.8,
+              "high": 103.4,
+              "low": 102.6,
+              "close": 103.2,
+              "volume": 1900000.0
+            },
+            {
+              "date": 20200116,
+              "open": 103.2,
+              "high": 103.8,
+              "low": 102.8,
+              "close": 103.5,
+              "volume": 2000000.0
+            },
+            {
+              "date": 20200117,
+              "open": 103.5,
+              "high": 104.0,
+              "low": 103.1,
+              "close": 103.9,
+              "volume": 2100000.0
+            },
+            {
+              "date": 20200120,
+              "open": 103.9,
+              "high": 104.3,
+              "low": 103.4,
+              "close": 104.1,
+              "volume": 2200000.0
+            },
+            {
+              "date": 20200121,
+              "open": 104.1,
+              "high": 104.7,
+              "low": 103.9,
+              "close": 104.5,
+              "volume": 2300000.0
+            },
+            {
+              "date": 20200122,
+              "open": 104.5,
+              "high": 105.0,
+              "low": 104.1,
+              "close": 104.8,
+              "volume": 2400000.0
+            },
+            {
+              "date": 20200123,
+              "open": 104.8,
+              "high": 105.2,
+              "low": 104.3,
+              "close": 104.6,
+              "volume": 2500000.0
+            },
+            {
+              "date": 20200124,
+              "open": 104.6,
+              "high": 105.1,
+              "low": 104.2,
+              "close": 104.9,
+              "volume": 2600000.0
+            },
+            {
+              "date": 20200127,
+              "open": 104.9,
+              "high": 105.4,
+              "low": 104.6,
+              "close": 105.2,
+              "volume": 2700000.0
+            },
+            {
+              "date": 20200128,
+              "open": 105.2,
+              "high": 105.8,
+              "low": 104.9,
+              "close": 105.6,
+              "volume": 2800000.0
+            },
+            {
+              "date": 20200129,
+              "open": 105.6,
+              "high": 106.1,
+              "low": 105.2,
+              "close": 105.9,
+              "volume": 2900000.0
+            },
+            {
+              "date": 20200130,
+              "open": 105.9,
+              "high": 106.3,
+              "low": 105.5,
+              "close": 106.1,
+              "volume": 3000000.0
+            },
+            {
+              "date": 20200131,
+              "open": 106.1,
+              "high": 106.6,
+              "low": 105.8,
+              "close": 106.4,
+              "volume": 3100000.0
+            },
+            {
+              "date": 20200203,
+              "open": 106.4,
+              "high": 106.9,
+              "low": 106.0,
+              "close": 106.7,
+              "volume": 3200000.0
+            },
+            {
+              "date": 20200204,
+              "open": 106.7,
+              "high": 107.2,
+              "low": 106.4,
+              "close": 107.0,
+              "volume": 3300000.0
+            },
+            {
+              "date": 20200205,
+              "open": 107.0,
+              "high": 107.5,
+              "low": 106.7,
+              "close": 107.3,
+              "volume": 3400000.0
+            },
+            {
+              "date": 20200206,
+              "open": 107.3,
+              "high": 107.8,
+              "low": 107.0,
+              "close": 107.6,
+              "volume": 3500000.0
+            },
+            {
+              "date": 20200207,
+              "open": 107.6,
+              "high": 108.1,
+              "low": 107.3,
+              "close": 107.9,
+              "volume": 3600000.0
+            },
+            {
+              "date": 20200210,
+              "open": 107.9,
+              "high": 108.4,
+              "low": 107.6,
+              "close": 108.2,
+              "volume": 3700000.0
+            },
+            {
+              "date": 20200211,
+              "open": 108.2,
+              "high": 108.6,
+              "low": 107.9,
+              "close": 108.4,
+              "volume": 3800000.0
+            },
+            {
+              "date": 20200212,
+              "open": 108.4,
+              "high": 108.8,
+              "low": 108.1,
+              "close": 108.6,
+              "volume": 3900000.0
+            },
+            {
+              "date": 20200213,
+              "open": 108.6,
+              "high": 109.0,
+              "low": 108.3,
+              "close": 108.8,
+              "volume": 4000000.0
+            },
+            {
+              "date": 20200214,
+              "open": 108.8,
+              "high": 109.2,
+              "low": 108.5,
+              "close": 109.0,
+              "volume": 4100000.0
+            },
+            {
+              "date": 20200217,
+              "open": 109.0,
+              "high": 109.5,
+              "low": 108.7,
+              "close": 109.2,
+              "volume": 4200000.0
+            },
+            {
+              "date": 20200218,
+              "open": 109.2,
+              "high": 109.7,
+              "low": 108.9,
+              "close": 109.4,
+              "volume": 4300000.0
+            },
+            {
+              "date": 20200219,
+              "open": 109.4,
+              "high": 109.9,
+              "low": 109.1,
+              "close": 109.6,
+              "volume": 4400000.0
+            },
+            {
+              "date": 20200220,
+              "open": 109.6,
+              "high": 110.1,
+              "low": 109.3,
+              "close": 109.8,
+              "volume": 4500000.0
+            },
+            {
+              "date": 20200221,
+              "open": 109.8,
+              "high": 110.3,
+              "low": 109.5,
+              "close": 110.0,
+              "volume": 4600000.0
+            },
+            {
+              "date": 20200224,
+              "open": 110.0,
+              "high": 110.4,
+              "low": 109.7,
+              "close": 110.1,
+              "volume": 4700000.0
+            },
+            {
+              "date": 20200225,
+              "open": 110.1,
+              "high": 110.6,
+              "low": 109.8,
+              "close": 110.3,
+              "volume": 4800000.0
+            },
+            {
+              "date": 20200226,
+              "open": 110.3,
+              "high": 110.8,
+              "low": 110.0,
+              "close": 110.5,
+              "volume": 4900000.0
+            },
+            {
+              "date": 20200227,
+              "open": 110.5,
+              "high": 111.0,
+              "low": 110.2,
+              "close": 110.7,
+              "volume": 5000000.0
+            },
+            {
+              "date": 20200228,
+              "open": 110.7,
+              "high": 111.1,
+              "low": 110.4,
+              "close": 110.9,
+              "volume": 5100000.0
+            },
+            {
+              "date": 20200302,
+              "open": 110.9,
+              "high": 111.3,
+              "low": 110.6,
+              "close": 111.1,
+              "volume": 5200000.0
+            },
+            {
+              "date": 20200303,
+              "open": 111.1,
+              "high": 111.6,
+              "low": 110.8,
+              "close": 111.3,
+              "volume": 5300000.0
+            },
+            {
+              "date": 20200304,
+              "open": 111.3,
+              "high": 111.8,
+              "low": 111.0,
+              "close": 111.5,
+              "volume": 5400000.0
+            },
+            {
+              "date": 20200305,
+              "open": 111.5,
+              "high": 112.0,
+              "low": 111.2,
+              "close": 111.7,
+              "volume": 5500000.0
+            },
+            {
+              "date": 20200306,
+              "open": 111.7,
+              "high": 112.1,
+              "low": 111.4,
+              "close": 111.9,
+              "volume": 5600000.0
+            },
+            {
+              "date": 20200309,
+              "open": 111.9,
+              "high": 112.3,
+              "low": 111.6,
+              "close": 112.1,
+              "volume": 5700000.0
+            },
+            {
+              "date": 20200310,
+              "open": 112.1,
+              "high": 112.5,
+              "low": 111.8,
+              "close": 112.3,
+              "volume": 5800000.0
+            },
+            {
+              "date": 20200311,
+              "open": 112.3,
+              "high": 112.7,
+              "low": 112.0,
+              "close": 112.5,
+              "volume": 5900000.0
+            }
+          ],
+          "returns": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0018416206261511192,
+            0.0018382352941177516,
+            0.0018348623853210455,
+            0.001831501831501825,
+            0.001828153564899404,
+            0.0018248175182482562,
+            0.0018214936247722413,
+            0.0009090909090907484,
+            0.0018165304268846771,
+            0.0018132366273799772,
+            0.0018099547511312153,
+            0.0018066847335140857,
+            0.0018034265103696878,
+            0.0018001800180018623,
+            0.0017969451931716396,
+            0.0017937219730941312,
+            0.001790510295434311,
+            0.0017873100983019086,
+            0.001784121320249854,
+            0.0017809439002671734
+          ],
+          "equity_curve": [
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100000.0,
+            100184.16206261511,
+            100368.32412523023,
+            100552.48618784532,
+            100736.64825046042,
+            100920.81031307552,
+            101104.97237569063,
+            101289.13443830573,
+            101381.21546961326,
+            101565.37753222836,
+            101749.53959484347,
+            101933.70165745857,
+            102117.86372007368,
+            102302.02578268878,
+            102486.1878453039,
+            102670.349907919,
+            102854.51197053409,
+            103038.6740331492,
+            103222.83609576429,
+            103406.9981583794,
+            103591.1602209945
+          ],
+          "total_return": 0.03591160220994505,
+          "total_trades": 1
+        },
+        "algorithm_results": {
+          "SELBIAS": {
+            "bias_metrics": {
+              "detected_bias": "OOS=0.0002  Selection bias=0.1384  t=0.000"
+            }
+          }
+        }
+      },
+      "applied_fixes": [
+        "Walk-forward optimization applied",
+        "Out-of-sample validation enforced",
+        "Multiple testing corrections applied",
+        "Parameter space reduction applied"
+      ],
+      "improvement_metrics": {
+        "sharpe_improvement": -3.548399999999994,
+        "bias_reduction": -0.0013999999999999846,
+        "trade_consistency": 1.0
+      },
+      "remaining_biases": [
+        "selection_bias"
+      ],
+      "remediation_plan": {
+        "detected_biases": [
+          "selection_bias"
+        ],
+        "remediation_steps": [
+          "Implement walk-forward optimization instead of single-period optimization",
+          "Use out-of-sample validation on unseen data segments",
+          "Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)",
+          "Reduce parameter optimization space to prevent over-searching"
+        ],
+        "suggested_improvements": [
+          "Split data into training/validation/out-of-sample sets (60/20/20)",
+          "Use cross-validation with rolling time windows",
+          "Implement parameter stability tests across market regimes",
+          "Add economic rationale constraints to parameter selection"
+        ],
+        "validation_recommendations": [
+          "Verify Sharpe ratio remains stable out-of-sample",
+          "Check parameter distributions are reasonable",
+          "Validate against random parameter sets (reality check test)",
+          "Test strategy on different market regimes"
+        ],
+        "summary": "Bias Remediation Summary\n========================\n\nDetected Biases: 1\nRecommended Actions: 4\n\nPriority Actions:\nImplement walk-forward optimization instead of single-period optimization Use out-of-sample validation on unseen data segments Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)\n\nThis remediation plan addresses potential data-mining artifacts and ensures\nstrategy robustness through proper validation and testing procedures.\n\nCritical Success Factors:\n\u2022 Implement walk-forward testing immediately\n\u2022 Apply multiple testing corrections\n\u2022 Focus on out-of-sample performance\n\u2022 Validate economic rationale regularly"
+      }
+    }
+  ],
+  "final_strategy": {
+    "name": "sma_strategy",
+    "strategy_type": "sma",
+    "parameters": {
+      "short": 7,
+      "long": 30,
+      "fee": 0.0005,
+      "symbol": "DEMO"
+    },
+    "metadata": {
+      "walk_forward": {
+        "windows": 4,
+        "step": "monthly"
+      },
+      "generated_files": [
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_walk_forward.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_oos_enforced.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_mt_correction.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp",
+        "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_batch_parameters.json"
+      ],
+      "oos_validation": {
+        "dataset": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/oos_sample_ohlc.txt"
+      },
+      "statistical_adjustments": {
+        "correction": "bonferroni",
+        "alpha": 0.01
+      },
+      "parameter_bounds": {
+        "short": [
+          3,
+          20
+        ],
+        "long": [
+          25,
+          80
+        ]
+      }
+    },
+    "source": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_parameter_reduced.cpp"
+  },
+  "success": false,
+  "latest_remediation_plan": {
+    "detected_biases": [
+      "selection_bias"
+    ],
+    "remediation_steps": [
+      "Implement walk-forward optimization instead of single-period optimization",
+      "Use out-of-sample validation on unseen data segments",
+      "Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)",
+      "Reduce parameter optimization space to prevent over-searching"
+    ],
+    "suggested_improvements": [
+      "Split data into training/validation/out-of-sample sets (60/20/20)",
+      "Use cross-validation with rolling time windows",
+      "Implement parameter stability tests across market regimes",
+      "Add economic rationale constraints to parameter selection"
+    ],
+    "validation_recommendations": [
+      "Verify Sharpe ratio remains stable out-of-sample",
+      "Check parameter distributions are reasonable",
+      "Validate against random parameter sets (reality check test)",
+      "Test strategy on different market regimes"
+    ],
+    "summary": "Bias Remediation Summary\n========================\n\nDetected Biases: 1\nRecommended Actions: 4\n\nPriority Actions:\nImplement walk-forward optimization instead of single-period optimization Use out-of-sample validation on unseen data segments Apply multiple testing corrections (Bonferroni, Holm-Bonferroni)\n\nThis remediation plan addresses potential data-mining artifacts and ensures\nstrategy robustness through proper validation and testing procedures.\n\nCritical Success Factors:\n\u2022 Implement walk-forward testing immediately\n\u2022 Apply multiple testing corrections\n\u2022 Focus on out-of-sample performance\n\u2022 Validate economic rationale regularly"
+  },
+  "final_config_path": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_final_20251009_234036.json",
+  "report_path": "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/bias_remediation_report_20251009_234036.txt",
+  "summary": "AUTOMATED BIAS REMEDIATION PIPELINE SUMMARY\n===========================================\nIterations Completed: 3\nPipeline Result: REQUIRES MANUAL INTERVENTION\n\nPERFORMANCE SNAPSHOT:\n  Initial Sharpe: -53.992\n  Final Sharpe:   -67.164\n  Total Return \u0394: +0.036%\n\nAPPLIED FIXES:\n  Iteration 3: Walk-forward optimization applied, Out-of-sample validation enforced, Multiple testing corrections applied, Parameter space reduction applied\n\nRECOMMENDATION: Further manual review recommended for unresolved bias signals.\nReport: /Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/bias_remediation_report_20251009_234036.txt\nFinal config: /Users/vontariusfalls/testing-and-tuning-market-trading-systems/automation_outputs/sma_strategy_final_20251009_234036.json"
+}

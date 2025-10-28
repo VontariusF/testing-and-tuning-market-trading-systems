@@ -1,0 +1,52 @@
+Start testing: Oct 11 13:00 PDT
+----------------------------------------------------------
+1/1 Testing: strategy_sma
+1/1 Test: strategy_sma
+Command: "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/build/strategy_runner" "sma" "/Users/vontariusfalls/testing-and-tuning-market-trading-systems/data/sample_ohlc.txt"
+Directory: /Users/vontariusfalls/testing-and-tuning-market-trading-systems/build
+"strategy_sma" start time: Oct 11 13:00 PDT
+Output:
+----------------------------------------------------------
+Starting SMA Crossover Strategy with DEMO
+File: /Users/vontariusfalls/testing-and-tuning-market-trading-systems/data/sample_ohlc.txt
+Processed 50 lines, 50 valid bars
+
+============================================================
+SMA CROSSOVER STRATEGY RESULTS
+============================================================
+Symbol: DEMO
+Parameters: Short=10, Long=40, Fee=0.0005
+
+PERFORMANCE METRICS:
+  Total Return: 0.034181%
+  Sharpe Ratio: -53.9917
+  Max Drawdown: 0.001%
+  Total Trades: 1
+  Win Rate: 100%
+  Avg Win: $34.181
+  Avg Loss: $0
+  Total Fees: $2.0181
+
+RISK METRICS:
+  Portfolio Value: $100034
+  Risk per Trade: 2%
+  Stop Loss: 2%
+  Take Profit: 6%
+============================================================
+
+=== STRATEGY SUMMARY ===
+Strategy: SMA Crossover Strategy
+Symbol: DEMO
+Total Return: 0.034181%
+Sharpe Ratio: -53.9917
+Max Drawdown: 0.001%
+Total Trades: 1
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"strategy_sma" end time: Oct 11 13:00 PDT
+"strategy_sma" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 11 13:00 PDT

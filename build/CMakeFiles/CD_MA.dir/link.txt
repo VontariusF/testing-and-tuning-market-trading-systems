@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/CD_MA.dir/CD_MA/CD_MA.CPP.o CMakeFiles/CD_MA.dir/CD_MA/CDmodel.cpp.o -o CD_MA

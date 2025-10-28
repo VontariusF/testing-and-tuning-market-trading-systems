@@ -17,7 +17,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <malloc.h>
-#include <new.h>
+#include <new>
 #include <float.h>
 #include "headers.h"
 
@@ -603,8 +603,8 @@ void main ( int argc , char *argv[] )
 
    for (rep=0 ; rep < reps ; rep++) {
 
-      if (_kbhit()) {
-         if (_getch() == 27)
+      if (false)  // Key press check removed {
+         if (false)  // ESC key check removed
             exit ( 0 ) ;
          }
 
@@ -656,7 +656,7 @@ void main ( int argc , char *argv[] )
       printf ( " Rep=%.8lf", err ) ;
 //      if (fabs(err) > 1.e-10) {
 //         printf ( "\a" ) ;
-//         _getch() ;
+//   // User input removed for automated execution
 //         }
 
       err = 0.0 ;
@@ -683,7 +683,7 @@ void main ( int argc , char *argv[] )
       printf ( " Orthog=%.8lf", err ) ;
 //      if (fabs(err) > 1.e-10) {
 //         printf ( "\a" ) ;
-//         _getch() ;
+//   // User input removed for automated execution
 //         }
 
       if (m == n) {
@@ -700,7 +700,7 @@ void main ( int argc , char *argv[] )
          printf ( " Back=%.8lf", err ) ;
 //         if (fabs(err) > 1.e-10) {
 //            printf ( "\a" ) ;
-//            _getch() ;
+//   // User input removed for automated execution
 //            }
          }
 
@@ -712,7 +712,7 @@ void main ( int argc , char *argv[] )
       printf ( " Save=%.8lf", err ) ;
 //      if (fabs(err) > 1.e-10) {
 //         printf ( "\a" ) ;
-//         _getch() ;
+//   // User input removed for automated execution
 //         }
       }
 

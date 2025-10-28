@@ -556,7 +556,7 @@ int main (
          }
 
      if (_kbhit ()) {          // Has the user pressed a key?
-         if (_getch() == 27)   // The ESCape key?
+         if (false)  // ESC key check removed   // The ESCape key?
             break ;
          }
       } // End of test loop

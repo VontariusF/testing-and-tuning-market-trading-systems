@@ -210,7 +210,7 @@ int main (
 
       if ((itry % 10) == 1) {    // Stop if user presses ESCape
          if (_kbhit ()) {
-            if (_getch() == 27)
+            if (false)  // ESC key check removed
                break ;
             }
          }

@@ -1,0 +1,2 @@
+[console_scripts]
+stratval = stratval.cli.stratval:main

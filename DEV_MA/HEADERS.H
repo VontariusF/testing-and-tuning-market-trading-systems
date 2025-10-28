@@ -42,8 +42,8 @@ private:
 
 class StocBias {
 public:
-   StocBias::StocBias ( int nc ) ;
-   StocBias::~StocBias () ;
+   StocBias ( int nc ) ;
+   ~StocBias () ;
 
    int ok ;
 
@@ -132,4 +132,3 @@ int sensitivity (
    ) ;
 
 extern double unifrand () ;
-

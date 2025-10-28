@@ -1,0 +1,717 @@
+STRATEGY TESTING RESULTS
+========================
+
+TOP 10 STRATEGIES:
+Rank	Strategy	Return%	Sharpe	MaxDD%	Win%	Trades	Score
+1	SMA	0	0	0	22.6899	974	0.4
+2	SMA	0	0	0	22.9428	4302	0.4
+3	SMA	0	0	0	22.487	2308	0.4
+4	SMA	0	0	0	21.4106	794	0.4
+5	SMA	0	0	0	22.2667	1500	0.4
+6	SMA	0	0	0	23.8342	1158	0.4
+7	SMA	0	0	0	22.5073	1364	0.4
+8	SMA	0	0	0	20.5592	1824	0.4
+9	SMA	0	0	0	21.1091	1118	0.4
+10	SMA	0	0	0	22.5243	1030	0.4
+
+DETAILED RESULTS:
+
+--- Strategy 1 ---
+Parameters: 35, 124, 0.00102
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 2 ---
+Parameters: 30, 36, 0.00069
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 3 ---
+Parameters: 6, 88, 0.00109
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 4 ---
+Parameters: 30, 189, 0.00052
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 5 ---
+Parameters: 31, 77, 0.00088
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 6 ---
+Parameters: 10, 179, 0.00034
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 7 ---
+Parameters: 23, 93, 0.00094
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 8 ---
+Parameters: 32, 63, 0.0006
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 9 ---
+Parameters: 31, 109, 0.00092
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 10 ---
+Parameters: 16, 171, 0.00024
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 11 ---
+Parameters: 41, 200, 0.00015
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 12 ---
+Parameters: 38, 86, 0.00097
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 13 ---
+Parameters: 30, 83, 0.00101
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 14 ---
+Parameters: 38, 160, 0.0006
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 15 ---
+Parameters: 7, 161, 0.00041
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 16 ---
+Parameters: 8, 90, 0.00022
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 17 ---
+Parameters: 16, 171, 0.00027
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 18 ---
+Parameters: 31, 149, 0.00065
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 19 ---
+Parameters: 28, 53, 0.00017
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 20 ---
+Parameters: 5, 177, 0.00075
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 21 ---
+Parameters: 36, 99, 0.00089
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 22 ---
+Parameters: 49, 99, 0.00044
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 23 ---
+Parameters: 16, 114, 0.00024
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 24 ---
+Parameters: 33, 40, 0.00106
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 25 ---
+Parameters: 27, 169, 0.00028
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 26 ---
+Parameters: 35, 165, 0.00049
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 27 ---
+Parameters: 44, 90, 0.00056
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 28 ---
+Parameters: 35, 109, 0.00076
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 29 ---
+Parameters: 30, 84, 0.00086
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 30 ---
+Parameters: 33, 132, 0.0008
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 31 ---
+Parameters: 5, 101, 0.00106
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 32 ---
+Parameters: 29, 135, 0.00088
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 33 ---
+Parameters: 26, 167, 0.00096
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 34 ---
+Parameters: 21, 22, 0.0002
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 35 ---
+Parameters: 7, 87, 0.00079
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 36 ---
+Parameters: 15, 178, 0.00016
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 37 ---
+Parameters: 49, 100, 0.00092
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 38 ---
+Parameters: 13, 174, 0.00077
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 39 ---
+Parameters: 24, 179, 0.00093
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 40 ---
+Parameters: 15, 28, 0.00075
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 41 ---
+Parameters: 46, 96, 0.00084
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 42 ---
+Parameters: 23, 42, 0.00024
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 43 ---
+Parameters: 46, 108, 0.00052
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 44 ---
+Parameters: 25, 28, 0.00052
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 45 ---
+Parameters: 49, 176, 0.00057
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 46 ---
+Parameters: 26, 151, 0.00039
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 47 ---
+Parameters: 16, 173, 0.00014
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 48 ---
+Parameters: 33, 62, 0.00056
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 49 ---
+Parameters: 35, 44, 0.00059
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 50 ---
+Parameters: 22, 46, 0.00093
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 51 ---
+Parameters: 27, 119, 0.00078
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 52 ---
+Parameters: 45, 187, 0.00054
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 53 ---
+Parameters: 27, 38, 0.00089
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 54 ---
+Parameters: 15, 118, 0.00109
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 55 ---
+Parameters: 31, 96, 0.00088
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 56 ---
+Parameters: 6, 116, 0.00073
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 57 ---
+Parameters: 40, 165, 0.00093
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 58 ---
+Parameters: 30, 146, 0.00072
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 59 ---
+Parameters: 18, 45, 0.00046
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 60 ---
+Parameters: 32, 102, 0.00098
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 61 ---
+Parameters: 21, 163, 0.00018
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 62 ---
+Parameters: 10, 70, 0.00022
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 63 ---
+Parameters: 34, 69, 0.00085
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 64 ---
+Parameters: 6, 117, 0.00073
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 65 ---
+Parameters: 34, 165, 0.00106
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 66 ---
+Parameters: 42, 48, 0.0007
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 67 ---
+Parameters: 47, 147, 0.00105
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 68 ---
+Parameters: 21, 136, 0.00075
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 69 ---
+Parameters: 22, 128, 0.00033
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 70 ---
+Parameters: 40, 186, 0.00059
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 71 ---
+Parameters: 27, 172, 0.00045
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 72 ---
+Parameters: 9, 174, 0.00062
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 73 ---
+Parameters: 40, 58, 0.00025
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 74 ---
+Parameters: 41, 158, 0.00037
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 75 ---
+Parameters: 35, 194, 0.00042
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 76 ---
+Parameters: 36, 95, 0.00012
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 77 ---
+Parameters: 21, 59, 0.00012
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 78 ---
+Parameters: 22, 75, 0.0002
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 79 ---
+Parameters: 32, 126, 0.00098
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 80 ---
+Parameters: 13, 125, 0.00097
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 81 ---
+Parameters: 33, 67, 0.00053
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 82 ---
+Parameters: 50, 137, 0.00106
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 83 ---
+Parameters: 27, 137, 0.00087
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 84 ---
+Parameters: 36, 127, 0.00108
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 85 ---
+Parameters: 27, 93, 0.00093
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 86 ---
+Parameters: 42, 55, 0.00027
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 87 ---
+Parameters: 5, 109, 0.0005
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 88 ---
+Parameters: 8, 147, 0.00019
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 89 ---
+Parameters: 45, 173, 0.00024
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 90 ---
+Parameters: 6, 88, 0.00054
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 91 ---
+Parameters: 14, 124, 0.00047
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 92 ---
+Parameters: 34, 152, 0.00086
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 93 ---
+Parameters: 15, 198, 0.00079
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 94 ---
+Parameters: 29, 175, 0.00059
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 95 ---
+Parameters: 31, 63, 0.00058
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 96 ---
+Parameters: 34, 104, 0.00023
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 97 ---
+Parameters: 38, 145, 0.00025
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 98 ---
+Parameters: 7, 179, 0.00027
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 99 ---
+Parameters: 32, 105, 0.00057
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4
+
+--- Strategy 100 ---
+Parameters: 16, 166, 0.00088
+Return: 0%
+Sharpe: 0
+Max DD: 0%
+Score: 0.4

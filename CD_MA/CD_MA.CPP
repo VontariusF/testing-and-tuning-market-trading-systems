@@ -154,8 +154,7 @@ int main (
 #endif
 
    if (alpha >= 1.0) {
-      printf ( "Alpha must be less than 1.  Press any key..." ) ;
-      _getch() ;
+      printf ( "Alpha must be less than 1.  Press any key..." ) ;   // User input removed for automated execution
       exit ( 1 ) ;
       }
 

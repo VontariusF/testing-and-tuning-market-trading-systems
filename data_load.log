@@ -1,0 +1,359 @@
+====================================================================================================
+Comprehensive Exchange Data Loader
+====================================================================================================
+
+Supported formats: JSON, Feather
+Supported exchanges: Binance, BinanceUS, Bybit, Coinbase, Hyperliquid
+
+🔍 Scanning for trading data files...
+   Found 316 files
+
+🔌 Connecting to PostgreSQL...
+✓ Connected successfully
+✓ Table 'exchange_ohlcv' created/verified
+
+📊 Processing 316 files...
+----------------------------------------------------------------------------------------------------
+   1/316 ✗ Failed: binanceus/BTC_USDT-1h (spot)
+   2/316 ✗ Failed: binanceus/ETH_USDT-15m (spot)
+   3/316 ✗ Failed: binanceus/BTC_USDT-5m (spot)
+   4/316 ✗ Failed: binanceus/ETH_USDT-1h (spot)
+   5/316 ✗ Failed: binanceus/SOL_USDT-15m (spot)
+   6/316 ✗ Failed: binanceus/ETH_USDT-5m (spot)
+   7/316 ✗ Failed: binanceus/BTC_USDT-15m (spot)
+   8/316 ✗ Failed: binanceus/SOL_USDT-1h (spot)
+   9/316 ✓ binance         ADA_USDT        5m    spot          210,478 candles
+  10/316 ✓ binance         SOL_USDT        5m    spot          210,478 candles
+      ✗ Error inserting data: ON CONFLICT DO UPDATE command cannot affect row a second time
+HINT:  Ensure that no rows proposed for insertion within the same command have duplicate constrained values.
+
+  11/316 ✗ Failed: coinbase/BTC_USDT-1h (spot)
+      ✗ Missing required columns. Found: ['open', 'high', 'low', 'close', 'volume']
+  12/316 ✗ Failed: coinbase/BTC_USDT-1h (spot)
+  13/316 ✗ Failed: binance/btc_usdt-1h (spot)
+  14/316 ✗ Failed: hyperliquid/BTC_USDC-4h (spot)
+  15/316 ✗ Failed: hyperliquid/BTC_USDC-4h (spot)
+  16/316 ✗ Failed: hyperliquid/ETH_USDC-1h (spot)
+  17/316 ✗ Failed: hyperliquid/ETH_USDT-4h (spot)
+  18/316 ✗ Failed: hyperliquid/BTC_USDT-1h (spot)
+  19/316 ✗ Failed: hyperliquid/ETH_USDC-4h (spot)
+  20/316 ✗ Failed: hyperliquid/ETH_USDC-1h (spot)
+  21/316 ✗ Failed: hyperliquid/ETH_USDT-1h (spot)
+  22/316 ✗ Failed: hyperliquid/BTC_USDT-4h (spot)
+  23/316 ✗ Failed: hyperliquid/BTC_USDC-1h (spot)
+  24/316 ✗ Failed: hyperliquid/ETH_USDC-4h (spot)
+  25/316 ✗ Failed: hyperliquid/BTC_USDC-1h (spot)
+  26/316 ✗ Failed: coinbase/ETH_USD-1h (spot)
+  27/316 ✗ Failed: coinbase/BTC_USD-1h (spot)
+  28/316 ✗ Failed: bybit/ADA_USDT-4h (mark)
+  29/316 ✗ Failed: bybit/ADA_USDT-4h (futures)
+  30/316 ✗ Failed: bybit/BTC_USDT-8h (funding_rate)
+  31/316 ✗ Failed: bybit/BNB_USDT-4h (mark)
+  32/316 ✗ Failed: bybit/SOL_USDT-1h (futures)
+  33/316 ✗ Failed: bybit/BNB_USDT-1h (futures)
+  34/316 ✗ Failed: bybit/BNB_USDT-8h (funding_rate)
+  35/316 ✗ Failed: bybit/SOL_USDT-8h (funding_rate)
+  36/316 ✗ Failed: bybit/ETH_USDT-8h (funding_rate)
+  37/316 ✗ Failed: bybit/ADA_USDT-8h (funding_rate)
+  38/316 ✗ Failed: bybit/SOL_USDT-4h (mark)
+  39/316 ✗ Failed: bybit/BTC_USDT-5m (futures)
+  40/316 ✗ Failed: bybit/BNB_USDT-4h (futures)
+  41/316 ✗ Failed: bybit/SOL_USDT-4h (futures)
+  42/316 ✗ Failed: bybit/ADA_USDT-1h (futures)
+  43/316 ✗ Failed: bybit/ETH_USDT-5m (futures)
+  44/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+  45/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+  46/316 ✗ Failed: bybit/BTC_USDT-1h (futures)
+  47/316 ✗ Failed: bybit/ETH_USDT-1h (futures)
+  48/316 ✗ Failed: bybit/ADA_USDT-5m (futures)
+  49/316 ✗ Failed: bybit/ETH_USDT-4h (futures)
+  50/316 ✗ Failed: bybit/BNB_USDT-5m (futures)
+  51/316 ✗ Failed: bybit/SOL_USDT-5m (futures)
+  52/316 ✗ Failed: bybit/BTC_USDT-4h (futures)
+  53/316 ✗ Failed: coinbaseexchange/ETH_USD-6h (spot)
+  54/316 ✗ Failed: coinbaseexchange/ETH_USD-1h (spot)
+  55/316 ✗ Failed: coinbaseexchange/BTC_USD-6h (spot)
+  56/316 ✗ Failed: coinbaseexchange/SOL_USD-6h (spot)
+  57/316 ✗ Failed: coinbaseexchange/BTC_USD-1h (spot)
+  58/316 ✗ Failed: coinbaseexchange/SOL_USD-1h (spot)
+  59/316 ✗ Failed: binance/BTC_USDT-1h (spot)
+  60/316 ✗ Failed: binance/ETH_USDT-1d (futures)
+  61/316 ✗ Failed: binance/DOGE_USDT-8h (funding_rate)
+  62/316 ✗ Failed: binance/DOGE_USDT-4h (futures)
+  63/316 ✗ Failed: binance/ADA_USDT-4h (futures)
+  64/316 ✗ Failed: binance/AVAX_USDT-8h (funding_rate)
+  65/316 ✗ Failed: binance/BTC_USDT-8h (funding_rate)
+  66/316 ✗ Failed: binance/SOL_USDT-1h (futures)
+  67/316 ✗ Failed: binance/BNB_USDT-1h (futures)
+  68/316 ✗ Failed: binance/BTC_USDT-1d (futures)
+  69/316 ✗ Failed: binance/BNB_USDT-8h (funding_rate)
+  70/316 ✗ Failed: binance/AVAX_USDT-1h (futures)
+  71/316 ✗ Failed: binance/SOL_USDT-8h (funding_rate)
+  72/316 ✗ Failed: binance/XRP_USDT-1h (futures)
+  73/316 ✗ Failed: binance/ETH_USDT-8h (funding_rate)
+  74/316 ✗ Failed: binance/AVAX_USDT-8h (mark)
+  75/316 ✗ Failed: binance/ETH_USDT-8h (mark)
+  76/316 ✗ Failed: binance/ADA_USDT-8h (funding_rate)
+  77/316 ✗ Failed: binance/BTC_USDT-8h (mark)
+  78/316 ✗ Failed: binance/BTC_USDT-6h (futures)
+  79/316 ✗ Failed: binance/XRP_USDT-4h (futures)
+  80/316 ✗ Failed: binance/DOT_USDT-1d (futures)
+  81/316 ✗ Failed: binance/AVAX_USDT-4h (futures)
+  82/316 ✗ Failed: binance/DOT_USDT-8h (mark)
+  83/316 ✗ Failed: binance/ETH_USDT-6h (futures)
+  84/316 ✗ Failed: binance/BTC_USDT-5m (futures)
+  85/316 ✗ Failed: binance/BNB_USDT-4h (futures)
+  86/316 ✗ Failed: binance/SOL_USDT-4h (futures)
+  87/316 ✗ Failed: binance/DOGE_USDT-1h (futures)
+  88/316 ✗ Failed: binance/ADA_USDT-1h (futures)
+  89/316 ✗ Failed: binance/ETH_USDT-5m (futures)
+  90/316 ✗ Failed: binance/XRP_USDT-1d (futures)
+  91/316 ✗ Failed: binance/DOT_USDT-4h (futures)
+  92/316 ✗ Failed: binance/AVAX_USDT-1d (futures)
+  93/316 ✗ Failed: binance/DOGE_USDT-8h (mark)
+  94/316 ✗ Failed: binance/XRP_USDT-8h (funding_rate)
+  95/316 ✗ Failed: binance/ADA_USDT-8h (mark)
+  96/316 ✗ Failed: binance/BTC_USDT-1h (futures)
+  97/316 ✗ Failed: binance/SOL_USDT-1d (futures)
+  98/316 ✗ Failed: binance/BNB_USDT-1d (futures)
+  99/316 ✗ Failed: binance/ETH_USDT-1h (futures)
+ 100/316 ✗ Failed: binance/ADA_USDT-5m (futures)
+ 101/316 ✗ Failed: binance/BNB_USDT-8h (mark)
+ 102/316 ✗ Failed: binance/ETH_USDT-4h (futures)
+ 103/316 ✗ Failed: binance/DOGE_USDT-1d (futures)
+ 104/316 ✗ Failed: binance/ADA_USDT-1d (futures)
+ 105/316 ✗ Failed: binance/SOL_USDT-5m (futures)
+ 106/316 ✗ Failed: binance/BTC_USDT-4h (futures)
+ 107/316 ✗ Failed: binance/SOL_USDT-8h (mark)
+ 108/316 ✗ Failed: binance/XRP_USDT-8h (mark)
+ 109/316 ✗ Failed: binance/DOT_USDT-1h (futures)
+ 110/316 ✗ Failed: binance/DOT_USDT-8h (funding_rate)
+ 111/316 ✗ Failed: hyperliquid/BTC_USDC-4h (spot)
+ 112/316 ✗ Failed: hyperliquid/BTC_USDC-4h (spot)
+ 113/316 ✗ Failed: hyperliquid/ETH_USDC-1h (spot)
+ 114/316 ✗ Failed: hyperliquid/ETH_USDT-4h (spot)
+ 115/316 ✗ Failed: hyperliquid/BTC_USDT-1h (spot)
+ 116/316 ✗ Failed: hyperliquid/ETH_USDC-4h (spot)
+ 117/316 ✗ Failed: hyperliquid/ETH_USDC-1h (spot)
+ 118/316 ✗ Failed: hyperliquid/ETH_USDT-1h (spot)
+ 119/316 ✗ Failed: hyperliquid/BTC_USDT-4h (spot)
+ 120/316 ✗ Failed: hyperliquid/BTC_USDC-1h (spot)
+ 121/316 ✗ Failed: hyperliquid/ETH_USDC-4h (spot)
+ 122/316 ✗ Failed: hyperliquid/BTC_USDC-1h (spot)
+ 123/316 ✗ Failed: coinbase/ETH_USD-1h (spot)
+ 124/316 ✗ Failed: coinbase/BTC_USD-1h (spot)
+ 125/316 ✓ bybit           BTC_USDT        4h    spot            1,206 candles
+ 126/316 ✓ bybit           ETH_USDT        1h    futures         4,866 candles
+ 127/316 ✓ bybit           BTC_USDT        1h    futures         4,866 candles
+ 128/316 ✓ bybit           BTC_USDT        1h    spot            4,826 candles
+ 129/316 ✓ bybit           ETH_USDT        4h    spot            1,206 candles
+ 130/316 ✓ bybit           ETH_USDT        1h    spot            4,826 candles
+ 131/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 132/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 133/316 ✗ Failed: bybit/ETH_USDT-1d (futures)
+ 134/316 ✗ Failed: bybit/BTC_USDT-8h (funding_rate)
+ 135/316 ✗ Failed: bybit/BTC_USDT-1d (futures)
+ 136/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+ 137/316 ✗ Failed: bybit/ETH_USDT-8h (funding_rate)
+ 138/316 ✓ bybit           ETH_USDT        1h    futures         4,868 candles
+ 139/316 ✓ bybit           BTC_USDT        1h    futures         4,868 candles
+ 140/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+ 141/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+ 142/316 ✗ Failed: bybit/BTC_USDT-1h (futures)
+ 143/316 ✗ Failed: bybit/ETH_USDT-1h (futures)
+ 144/316 ✗ Failed: bybit/ETH_USDT-4h (futures)
+ 145/316 ✓ bybit           ETH_USDT        8h    funding_rate      607 candles
+ 146/316 ✗ Failed: bybit/BTC_USDT-4h (futures)
+ 147/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 148/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 149/316 ✓ bybit           BTC_USDT        8h    funding_rate      607 candles
+ 150/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+ 151/316 ✗ Failed: coinbaseexchange/ETH_USD-6h (spot)
+ 152/316 ✗ Failed: coinbaseexchange/ETH_USD-1h (spot)
+ 153/316 ✗ Failed: coinbaseexchange/BTC_USD-6h (spot)
+ 154/316 ✗ Failed: coinbaseexchange/SOL_USD-6h (spot)
+ 155/316 ✗ Failed: coinbaseexchange/BTC_USD-1h (spot)
+ 156/316 ✗ Failed: coinbaseexchange/SOL_USD-1h (spot)
+ 157/316 ✗ Failed: binance/BTC_USDT-1h (spot)
+ 158/316 ✗ Failed: binance/ETH_USDT-1d (futures)
+ 159/316 ✗ Failed: binance/BTC_USDT-8h (funding_rate)
+ 160/316 ✗ Failed: binance/BTC_USDT-1d (futures)
+ 161/316 ✗ Failed: binance/ETH_USDT-8h (funding_rate)
+ 162/316 ✗ Failed: binance/ETH_USDT-8h (mark)
+ 163/316 ✗ Failed: binance/BTC_USDT-8h (mark)
+ 164/316 ✗ Failed: binance/BTC_USDT-6h (futures)
+ 165/316 ✗ Failed: binance/ETH_USDT-6h (futures)
+ 166/316 ✗ Failed: binance/BTC_USDT-1h (futures)
+ 167/316 ✗ Failed: binance/ETH_USDT-1h (futures)
+ 168/316 ✗ Failed: binance/ETH_USDT-4h (futures)
+ 169/316 ✗ Failed: binance/BTC_USDT-4h (futures)
+ 170/316 ✗ Failed: hyperliquid/BTC_USDC-4h (spot)
+ 171/316 ✗ Failed: hyperliquid/BTC_USDC-4h (spot)
+ 172/316 ✗ Failed: hyperliquid/ETH_USDC-1h (spot)
+ 173/316 ✗ Failed: hyperliquid/ETH_USDT-4h (spot)
+ 174/316 ✗ Failed: hyperliquid/BTC_USDT-1h (spot)
+ 175/316 ✗ Failed: hyperliquid/ETH_USDC-4h (spot)
+ 176/316 ✗ Failed: hyperliquid/ETH_USDC-1h (spot)
+ 177/316 ✗ Failed: hyperliquid/ETH_USDT-1h (spot)
+ 178/316 ✗ Failed: hyperliquid/BTC_USDT-4h (spot)
+ 179/316 ✗ Failed: hyperliquid/BTC_USDC-1h (spot)
+ 180/316 ✗ Failed: hyperliquid/ETH_USDC-4h (spot)
+ 181/316 ✗ Failed: hyperliquid/BTC_USDC-1h (spot)
+ 182/316 ✗ Failed: coinbase/ETH_USD-1h (spot)
+ 183/316 ✗ Failed: coinbase/BTC_USD-1h (spot)
+ 184/316 ✓ bybit           BTC_USDT        4h    spot            1,206 candles
+ 185/316 ✓ bybit           ETH_USDT        1h    futures         4,866 candles
+ 186/316 ✓ bybit           BTC_USDT        1h    futures         4,866 candles
+ 187/316 ✓ bybit           BTC_USDT        1h    spot            4,826 candles
+ 188/316 ✗ Failed: bybit/BTC_USDT-5m (futures)
+ 189/316 ✗ Failed: bybit/ETH_USDT-5m (futures)
+ 190/316 ✓ bybit           ETH_USDT        4h    spot            1,206 candles
+ 191/316 ✓ bybit           ETH_USDT        1h    spot            4,826 candles
+ 192/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 193/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 194/316 ✗ Failed: bybit/ETH_USDT-1d (futures)
+ 195/316 ✗ Failed: bybit/DOGE_USDT-8h (funding_rate)
+ 196/316 ✗ Failed: bybit/DOGE_USDT-4h (futures)
+ 197/316 ✗ Failed: bybit/ADA_USDT-4h (futures)
+ 198/316 ✗ Failed: bybit/AVAX_USDT-8h (funding_rate)
+ 199/316 ✗ Failed: bybit/BTC_USDT-8h (funding_rate)
+ 200/316 ✗ Failed: bybit/SOL_USDT-1h (futures)
+ 201/316 ✗ Failed: bybit/BNB_USDT-1h (futures)
+ 202/316 ✗ Failed: bybit/BTC_USDT-1d (futures)
+ 203/316 ✗ Failed: bybit/BNB_USDT-8h (funding_rate)
+ 204/316 ✗ Failed: bybit/AVAX_USDT-1h (futures)
+ 205/316 ✗ Failed: bybit/SOL_USDT-8h (funding_rate)
+ 206/316 ✗ Failed: bybit/XRP_USDT-1h (futures)
+ 207/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+ 208/316 ✗ Failed: bybit/ETH_USDT-8h (funding_rate)
+ 209/316 ✗ Failed: bybit/AVAX_USDT-8h (mark)
+ 210/316 ✗ Failed: bybit/ETH_USDT-8h (mark)
+ 211/316 ✓ bybit           ETH_USDT        1h    futures         4,868 candles
+ 212/316 ✗ Failed: bybit/ADA_USDT-8h (funding_rate)
+ 213/316 ✗ Failed: bybit/BTC_USDT-8h (mark)
+ 214/316 ✓ bybit           BTC_USDT        1h    futures         4,868 candles
+ 215/316 ✗ Failed: bybit/BTC_USDT-6h (futures)
+ 216/316 ✗ Failed: bybit/XRP_USDT-4h (futures)
+ 217/316 ✗ Failed: bybit/DOT_USDT-1d (futures)
+ 218/316 ✗ Failed: bybit/AVAX_USDT-4h (futures)
+ 219/316 ✗ Failed: bybit/DOT_USDT-8h (mark)
+ 220/316 ✗ Failed: bybit/ETH_USDT-6h (futures)
+ 221/316 ✗ Failed: bybit/BTC_USDT-5m (futures)
+ 222/316 ✗ Failed: bybit/BNB_USDT-4h (futures)
+ 223/316 ✗ Failed: bybit/SOL_USDT-4h (futures)
+ 224/316 ✗ Failed: bybit/DOGE_USDT-1h (futures)
+ 225/316 ✗ Failed: bybit/ADA_USDT-1h (futures)
+ 226/316 ✗ Failed: bybit/ETH_USDT-5m (futures)
+ 227/316 ✗ Failed: bybit/XRP_USDT-1d (futures)
+ 228/316 ✗ Failed: bybit/DOT_USDT-4h (futures)
+ 229/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+ 230/316 ✗ Failed: bybit/AVAX_USDT-1d (futures)
+ 231/316 ✗ Failed: bybit/ETH_USDT-4h (mark)
+ 232/316 ✗ Failed: bybit/DOGE_USDT-8h (mark)
+ 233/316 ✗ Failed: bybit/BTC_USDT-15m (futures)
+ 234/316 ✗ Failed: bybit/XRP_USDT-8h (funding_rate)
+ 235/316 ✗ Failed: bybit/ADA_USDT-8h (mark)
+ 236/316 ✗ Failed: bybit/BTC_USDT-1h (futures)
+ 237/316 ✗ Failed: bybit/SOL_USDT-1d (futures)
+ 238/316 ✗ Failed: bybit/BNB_USDT-1d (futures)
+ 239/316 ✗ Failed: bybit/ETH_USDT-1h (futures)
+ 240/316 ✗ Failed: bybit/BNB_USDT-8h (mark)
+ 241/316 ✗ Failed: bybit/ETH_USDT-4h (futures)
+ 242/316 ✗ Failed: bybit/DOGE_USDT-1d (futures)
+ 243/316 ✗ Failed: bybit/ADA_USDT-1d (futures)
+ 244/316 ✓ bybit           ETH_USDT        8h    funding_rate      607 candles
+ 245/316 ✗ Failed: bybit/ETH_USDT-30m (futures)
+ 246/316 ✗ Failed: bybit/BTC_USDT-4h (futures)
+ 247/316 ✓ bybit           BTC_USDT        4h    futures         1,216 candles
+ 248/316 ✓ bybit           ETH_USDT        4h    futures         1,216 candles
+ 249/316 ✓ bybit           BTC_USDT        8h    funding_rate      607 candles
+ 250/316 ✗ Failed: bybit/ETH_USDT-15m (futures)
+ 251/316 ✗ Failed: bybit/SOL_USDT-8h (mark)
+ 252/316 ✗ Failed: bybit/BTC_USDT-4h (mark)
+ 253/316 ✗ Failed: bybit/XRP_USDT-8h (mark)
+ 254/316 ✗ Failed: bybit/DOT_USDT-1h (futures)
+ 255/316 ✗ Failed: bybit/DOT_USDT-8h (funding_rate)
+ 256/316 ✗ Failed: coinbaseexchange/ETH_USD-6h (spot)
+ 257/316 ✗ Failed: coinbaseexchange/ETH_USD-1h (spot)
+ 258/316 ✗ Failed: coinbaseexchange/BTC_USD-6h (spot)
+ 259/316 ✗ Failed: coinbaseexchange/SOL_USD-6h (spot)
+ 260/316 ✗ Failed: coinbaseexchange/BTC_USD-1h (spot)
+ 261/316 ✗ Failed: coinbaseexchange/SOL_USD-1h (spot)
+ 262/316 ✗ Failed: binance/BTC_USDT-1h (spot)
+ 263/316 ✗ Failed: binance/ETH_USDT-1d (futures)
+ 264/316 ✗ Failed: binance/DOGE_USDT-8h (funding_rate)
+ 265/316 ✗ Failed: binance/DOGE_USDT-4h (futures)
+ 266/316 ✗ Failed: binance/ADA_USDT-4h (futures)
+ 267/316 ✗ Failed: binance/AVAX_USDT-8h (funding_rate)
+ 268/316 ✗ Failed: binance/BTC_USDT-8h (funding_rate)
+ 269/316 ✗ Failed: binance/SOL_USDT-1h (futures)
+ 270/316 ✗ Failed: binance/BNB_USDT-1h (futures)
+ 271/316 ✗ Failed: binance/BTC_USDT-1d (futures)
+ 272/316 ✗ Failed: binance/BNB_USDT-8h (funding_rate)
+ 273/316 ✗ Failed: binance/AVAX_USDT-1h (futures)
+ 274/316 ✗ Failed: binance/SOL_USDT-8h (funding_rate)
+ 275/316 ✗ Failed: binance/XRP_USDT-1h (futures)
+ 276/316 ✗ Failed: binance/ETH_USDT-8h (funding_rate)
+ 277/316 ✗ Failed: binance/AVAX_USDT-8h (mark)
+ 278/316 ✗ Failed: binance/ETH_USDT-8h (mark)
+ 279/316 ✗ Failed: binance/ADA_USDT-8h (funding_rate)
+ 280/316 ✗ Failed: binance/BTC_USDT-8h (mark)
+ 281/316 ✗ Failed: binance/BTC_USDT-6h (futures)
+ 282/316 ✗ Failed: binance/XRP_USDT-4h (futures)
+ 283/316 ✗ Failed: binance/DOT_USDT-1d (futures)
+ 284/316 ✗ Failed: binance/AVAX_USDT-4h (futures)
+ 285/316 ✗ Failed: binance/DOT_USDT-8h (mark)
+ 286/316 ✗ Failed: binance/ETH_USDT-6h (futures)
+ 287/316 ✗ Failed: binance/BTC_USDT-5m (futures)
+ 288/316 ✗ Failed: binance/BNB_USDT-4h (futures)
+ 289/316 ✗ Failed: binance/SOL_USDT-4h (futures)
+ 290/316 ✗ Failed: binance/DOGE_USDT-1h (futures)
+ 291/316 ✗ Failed: binance/ADA_USDT-1h (futures)
+ 292/316 ✗ Failed: binance/ETH_USDT-5m (futures)
+ 293/316 ✗ Failed: binance/XRP_USDT-1d (futures)
+ 294/316 ✗ Failed: binance/DOT_USDT-4h (futures)
+ 295/316 ✗ Failed: binance/AVAX_USDT-1d (futures)
+ 296/316 ✗ Failed: binance/DOGE_USDT-8h (mark)
+ 297/316 ✗ Failed: binance/XRP_USDT-8h (funding_rate)
+ 298/316 ✗ Failed: binance/ADA_USDT-8h (mark)
+ 299/316 ✗ Failed: binance/BTC_USDT-1h (futures)
+ 300/316 ✗ Failed: binance/SOL_USDT-1d (futures)
+ 301/316 ✗ Failed: binance/BNB_USDT-1d (futures)
+ 302/316 ✗ Failed: binance/ETH_USDT-1h (futures)
+ 303/316 ✗ Failed: binance/ADA_USDT-5m (futures)
+ 304/316 ✗ Failed: binance/BNB_USDT-8h (mark)
+ 305/316 ✗ Failed: binance/ETH_USDT-4h (futures)
+ 306/316 ✗ Failed: binance/DOGE_USDT-1d (futures)
+ 307/316 ✗ Failed: binance/ADA_USDT-1d (futures)
+ 308/316 ✗ Failed: binance/SOL_USDT-5m (futures)
+ 309/316 ✗ Failed: binance/BTC_USDT-4h (futures)
+ 310/316 ✗ Failed: binance/SOL_USDT-8h (mark)
+ 311/316 ✗ Failed: binance/XRP_USDT-8h (mark)
+ 312/316 ✗ Failed: binance/DOT_USDT-1h (futures)
+ 313/316 ✗ Failed: binance/DOT_USDT-8h (funding_rate)
+ 314/316 ✗ Failed: binance/BTC_USDT-5m (futures)
+ 315/316 ✗ Failed: binance/ETH_USDT-5m (futures)
+ 316/316 ✗ Failed: binance/SOL_USDT-5m (futures)
+----------------------------------------------------------------------------------------------------
+
+📈 Summary:
+   Successful: 30/316 files
+   Failed:     286/316 files
+   Total rows: 496,176 candles inserted/updated
+
+====================================================================================================
+📊 Database Statistics by Exchange
+====================================================================================================
+
+Exchange             Symbols    Timeframes   Types    Candles         First                Last                
+------------------------------------------------------------------------------------------------------------------------
+binance              2          1            1        420,956         2023-09-20 17:00:00  2025-09-20 12:45:00 
+bybit                2          3            3        25,446          2025-02-26 16:00:00  2025-09-17 12:00:00 
+------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                 446,402        
+
+✓ Database connection closed
+
+====================================================================================================
+✅ Data loading complete!
+====================================================================================================
