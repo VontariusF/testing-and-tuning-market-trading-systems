@@ -1,0 +1,19 @@
+{
+  "tool": "run_experiment",
+  "request_id": "run_experiment_4f0c21fd",
+  "params": {
+    "strategy": "Moving average crossover strategy",
+    "strategy_type": "moving_average",
+    "market_data": {
+      "pair": "BTC/USDT",
+      "timeframe": "1h",
+      "start_date": "2020-01-01",
+      "end_date": "2023-12-31"
+    },
+    "parameters": {
+      "fast_period": 10,
+      "slow_period": 30
+    },
+    "seed": 43
+  }
+}

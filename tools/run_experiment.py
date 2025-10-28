@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+"""
+Run Experiment Tool
+Executes backtest or training runs for trading strategies
+"""
+
+import json
+import sys
+import os
+import subprocess
+from pathlib import Path
+from typing import Dict, Any, Optional
+import argparse
+import time
+import uuid
+
+
+def load_request(request_path: str) -> Dict[str, Any]:
+    """Load JSON request from inbox"""
+    with open(request_path, 'r') as f:
+        return json.load(f)
+
+
+def run_strategy_backtest(params: Dict[str, Any]) -> Dict[str, Any]:
+    """Run strategy backtest using existing StratVal system"""
+    try:
+        # Import StratVal components
+        sys.path.append(str(Path(__file__).parent.parent))
+        from stratval.pipeline.orchestrator import ValidationOrchestrator
+        
+        orchestrator = ValidationOrchestrator()
+        
+        # Generate strategy description if not provided
+        strategy_desc = params.get('strategy', 'moving average crossover strategy')
+        if not strategy_desc.lower().startswith(('rsi', 'macd', 'bollinger', 'volume')):
+            # Generate default strategy based on parameters
+            fast = params.get('parameters', {}).get('fast_period', 10)
+            slow = params.get('parameters', {}).get('slow_period', 30)
+            strategy_desc = f"moving average crossover strategy with {fast} and {slow} periods"
+        
+        # Create temporary strategy file
+        strategy_dir = Path("temp_strategies")
+        strategy_dir.mkdir(exist_ok=True)
+        strategy_file = strategy_dir / f"strategy_{params.get('request_id', 'temp')}.cpp"
+        
+        # Generate strategy code
+        from stratval.generator.strategy_generator import StrategyGenerator
+        generator = StrategyGenerator()
+        strategy_code = generator.from_natural_language(strategy_desc)
+        
+        with open(strategy_file, 'w') as f:
+            f.write(strategy_code)
+        
+        # Extract market data parameters
+        market_data = params.get('market_data', {})
+        pair = market_data.get('pair', 'BTC/USDT')
+        timeframe = market_data.get('timeframe', '1h')
+        start_date = market_data.get('start_date', '2020-01-01')
+        end_date = market_data.get('end_date', '2023-12-31')
+        
+        # Run validation
+        results = orchestrator.validate(
+            strategy_path=str(strategy_file),
+            pair=pair,
+            timeframe=timeframe,
+            mode='standard',
+            output_dir='temp_results'
+        )
+        
+        # Clean up temporary files
+        if strategy_file.exists():
+            strategy_file.unlink()
+        
+        return {
+            "status": "OK",
+            "strategy": strategy_desc,
+            "results": results,
+            "artifacts": {
+                "log_file": f"temp_results/validation_{params.get('request_id')}.log"
+            }
+        }
+        
+    except Exception as e:
+        return {
+            "status": "ERROR",
+            "error": str(e),
+            "strategy": params.get('strategy', 'unknown')
+        }
+
+
+def save_response(request_id: str, response: Dict[str, Any]) -> str:
+    """Save response to outbox"""
+    outbox_dir = Path(__file__).parent.parent / "runs" / "current" / "outbox"
+    outbox_dir.mkdir(parents=True, exist_ok=True)
+    
+    response_file = outbox_dir / f"run_experiment_{request_id}.json"
+    
+    response_with_meta = {
+        "request_id": request_id,
+        "timestamp": time.time(),
+        **response
+    }
+    
+    with open(response_file, 'w') as f:
+        json.dump(response_with_meta, f, indent=2)
+    
+    return str(response_file)
+
+
+def main():
+    """Main tool execution"""
+    parser = argparse.ArgumentParser(description="Run experiment tool")
+    parser.add_argument("request_file", help="Path to JSON request file")
+    
+    args = parser.parse_args()
+    
+    try:
+        # Load request
+        request = load_request(args.request_file)
+        request_id = request.get('request_id', str(uuid.uuid4()))
+        params = request.get('params', {})
+        
+        print(f"Running experiment: {request_id}")
+        print(f"Strategy: {params.get('strategy', 'unknown')}")
+        
+        # Execute experiment
+        result = run_strategy_backtest(params)
+        
+        # Save response
+        response_file = save_response(request_id, result)
+        print(f"Results saved to: {response_file}")
+        
+        # Return 0 for success, 1 for error
+        return 0 if result.get('status') == 'OK' else 1
+        
+    except Exception as e:
+        print(f"Error running experiment: {e}")
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
