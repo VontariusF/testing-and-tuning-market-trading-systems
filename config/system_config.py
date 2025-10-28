@@ -19,9 +19,9 @@ DATABASE_CONFIG = {
     "postgresql": {
         "host": os.getenv("POSTGRES_HOST", "localhost"),
         "port": int(os.getenv("POSTGRES_PORT", "5432")),
-        "database": os.getenv("POSTGRES_DB", "freqtrade"),
-        "user": os.getenv("POSTGRES_USER", "freqtrade"),
-        "password": os.getenv("POSTGRES_PASSWORD", "freqtrade")
+        "database": os.getenv("POSTGRES_DB", "freqtrade_db"),
+        "user": os.getenv("POSTGRES_USER", "freqtrade_user"),
+        "password": os.getenv("POSTGRES_PASSWORD", "Vontarius97$")
     },
     "sqlite": {
         "path": os.getenv("SQLITE_PATH", "freqtrade.db")
